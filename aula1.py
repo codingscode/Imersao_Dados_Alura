@@ -2,6 +2,7 @@
 import pandas as pd
 
 #fonte = 'https://github.com/alura-cursos/imersao-dados-2-2020/blob/master/MICRODADOS_ENEM_2019_SAMPLE_43278.csv?raw=true'
+
 # forma alternativa se já baixado
 fonte = './nao_enviar/MICRODADOS_ENEM_2019_SAMPLE_43278.csv'
 
@@ -27,8 +28,11 @@ print(dados[['NO_MUNICIPIO_NASCIMENTO', 'Q025']])  # 2 colunas
 
 print('3------------------------')
 print(dados['SG_UF_RESIDENCIA'].unique())  #  lista de UFs não repetidos
+print(len(dados['SG_UF_RESIDENCIA'].unique()))
 
 print('4------------------------')
+print(dados['SG_UF_RESIDENCIA'].value_counts())  #  conta valores
+
 print('5------------------------')
 print('6------------------------')
 print('7------------------------')
