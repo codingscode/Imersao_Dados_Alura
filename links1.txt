@@ -5,7 +5,7 @@ video_1 :
             https://github.com/alura-cursos/imersao-dados-2-2020/blob/master/MICRODADOS_ENEM_2019_SAMPLE_43278.csv
             
     http://inep.gov.br/microdados
-
+    link útil em python:  https://towardsdatascience.com/pretty-displaying-tricks-for-columnar-data-in-python-2fe3b3ed9b83
 
 
 

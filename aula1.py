@@ -6,12 +6,13 @@ import pandas as pd
 fonte = './nao_enviar/MICRODADOS_ENEM_2019_SAMPLE_43278.csv'
 
 
-pd.set_option('display.max_columns', None)
+pd.options.display.width = None  #  todas as colunas horizontalmente
+#pd.set_option('display.max_columns', None)
 
 
 dados = pd.read_csv(fonte)
-#print(dados.head())
-print(dados.shape)   #  // (número de linhas, numero de colunas) -> (127380, 136)
+print(dados.head())
+#print(dados.shape)   #  // (número de linhas, numero de colunas) -> (127380, 136)
 
 
 
