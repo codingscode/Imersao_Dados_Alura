@@ -1,0 +1,31 @@
+
+video_1 :
+    https://www.alura.com.br/imersao-dados/aula01-educacao-no-brasil?utm_source=ActiveCampaign&utm_medium=email&utm_content=No+ar%3A+primeira+aula+da+%23Imers%C3%A3oDados&utm_campaign=%5BIMERS%C3%83O+DADOS%5D+%28Aula%29+01
+            https://colab.research.google.com/drive/1zgZzt7w5cVNwTZg76aIKQ9f-ybr8SEr3?usp=sharing
+            https://github.com/alura-cursos/imersao-dados-2-2020/blob/master/MICRODADOS_ENEM_2019_SAMPLE_43278.csv
+            
+    http://inep.gov.br/microdados
+
+
+
+
+------------------------------------------------------
+paradas
+
+1:
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------
+
+
+
+
