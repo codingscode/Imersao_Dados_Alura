@@ -6,6 +6,8 @@ video_1 :
             
     http://inep.gov.br/microdados
     link útil em python:  https://towardsdatascience.com/pretty-displaying-tricks-for-columnar-data-in-python-2fe3b3ed9b83
+    https://saralgyaan.com/posts/matplotlib-subplot-in-python-matplotlib-tutorial-chapter-10/
+
 
 
 
