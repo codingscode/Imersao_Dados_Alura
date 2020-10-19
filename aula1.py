@@ -46,16 +46,14 @@ print(dados['NU_IDADE'].hist(bins=20))
 dados['NU_IDADE'].hist()
 
 print('8------------------------')
-print(dados['NU_IDADE'])
-print(type(dados['NU_IDADE']))
-print(dados['NU_IDADE'].value_counts().sort_index())
-print('**')
-print(dados['NU_IDADE'].value_counts().sort_index().keys())
-print(dados['NU_IDADE'].value_counts().sort_index().keys()[0])
-print(dados['NU_IDADE'].value_counts().sort_index().values)
-print(dados['NU_IDADE'].value_counts().sort_index().values[0])
-
-
+#print(dados['NU_IDADE'])
+#print(type(dados['NU_IDADE']))
+#print(dados['NU_IDADE'].value_counts().sort_index())
+#print('**')
+#print(dados['NU_IDADE'].value_counts().sort_index().keys())
+#print(dados['NU_IDADE'].value_counts().sort_index().keys()[0])
+#print(dados['NU_IDADE'].value_counts().sort_index().values)
+#print(dados['NU_IDADE'].value_counts().sort_index().values[0])
 chaves = []
 valores = []
 
@@ -75,7 +73,7 @@ ax.plot(chaves, valores)
 plt.show()
 
 
-print('8------------------------')
+print('9------------------------')
 """
 import matplotlib.pyplot as plt
 
@@ -92,14 +90,8 @@ plt.show()
 """
 
 
-
-
-
-
-
-
-print('9------------------------')
 print('10------------------------')
 print('11------------------------')
 print('12------------------------')
 print('13------------------------')
+print('14------------------------')
