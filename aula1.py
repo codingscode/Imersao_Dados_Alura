@@ -23,9 +23,11 @@ print(dados.columns.values)  # nomes das colunas
 
 print('------------------------')
 #print(dados['NO_MUNICIPIO_NASCIMENTO', 'Q025'])  # dá erro
-print(dados[['NO_MUNICIPIO_NASCIMENTO', 'Q025']])  #
+print(dados[['NO_MUNICIPIO_NASCIMENTO', 'Q025']])  # 2 colunas
 
 print('3------------------------')
+print(dados['SG_UF_RESIDENCIA'].unique())  #  lista de UFs não repetidos
+
 print('4------------------------')
 print('5------------------------')
 print('6------------------------')
