@@ -34,10 +34,21 @@ print('4------------------------')
 print(dados['SG_UF_RESIDENCIA'].value_counts())  #  conta valores
 
 print('5------------------------')
+print(dados['NU_IDADE'].value_counts())  #  conta valores
+
 print('6------------------------')
+print(dados['NU_IDADE'].value_counts().sort_index())
+
+# desafio1: proporção de inscritos por idade
+# desafio2: Descobrir de quais estados são os inscritos com 13 anos.
+
 print('7------------------------')
+
+
 print('8------------------------')
 print('9------------------------')
 print('10------------------------')
 print('11------------------------')
+print('12------------------------')
+print('13------------------------')
 
