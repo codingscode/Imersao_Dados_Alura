@@ -14,9 +14,24 @@ dados = pd.read_csv(fonte)
 print(dados.head())
 #print(dados.shape)   #  // (número de linhas, numero de colunas) -> (127380, 136)
 
-print('------------------------')
+print('1------------------------')
 
 print(dados['NO_MUNICIPIO_NASCIMENTO'])  #  escolhendo uma coluna
 
+print('2------------------------')
+print(dados.columns.values)  # nomes das colunas
+
 print('------------------------')
+#print(dados['NO_MUNICIPIO_NASCIMENTO', 'Q025'])  # dá erro
+print(dados[['NO_MUNICIPIO_NASCIMENTO', 'Q025']])  #
+
+print('3------------------------')
+print('4------------------------')
+print('5------------------------')
+print('6------------------------')
+print('7------------------------')
+print('8------------------------')
+print('9------------------------')
+print('10------------------------')
+print('11------------------------')
 
