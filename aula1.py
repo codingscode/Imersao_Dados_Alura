@@ -14,12 +14,9 @@ dados = pd.read_csv(fonte)
 print(dados.head())
 #print(dados.shape)   #  // (número de linhas, numero de colunas) -> (127380, 136)
 
-
-
-
-
-
-
 print('------------------------')
+
+print(dados['NO_MUNICIPIO_NASCIMENTO'])  #  escolhendo uma coluna
+
 print('------------------------')
 
