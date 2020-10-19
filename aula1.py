@@ -41,19 +41,20 @@ print(dados['NU_IDADE'].value_counts().sort_index())
 # desafio2: Descobrir de quais estados são os inscritos com 13 anos.
 
 print('7------------------------')
-print(dados['NU_IDADE'].hist())
-print(dados['NU_IDADE'].hist(bins=20))
+print(dados['NU_IDADE'].hist())   # testar no colab ipynb
+print(dados['NU_IDADE'].hist(bins=20, figsize=(10, 8)))  # testar no colab ipynb
 dados['NU_IDADE'].hist()
+print(dados['NU_IDADE'].hist)
 
 print('8------------------------')
-#print(dados['NU_IDADE'])
-#print(type(dados['NU_IDADE']))
-#print(dados['NU_IDADE'].value_counts().sort_index())
-#print('**')
-#print(dados['NU_IDADE'].value_counts().sort_index().keys())
-#print(dados['NU_IDADE'].value_counts().sort_index().keys()[0])
-#print(dados['NU_IDADE'].value_counts().sort_index().values)
-#print(dados['NU_IDADE'].value_counts().sort_index().values[0])
+# print(dados['NU_IDADE'])
+# print(type(dados['NU_IDADE']))
+# print(dados['NU_IDADE'].value_counts().sort_index())
+# print('**')
+# print(dados['NU_IDADE'].value_counts().sort_index().keys())
+# print(dados['NU_IDADE'].value_counts().sort_index().keys()[0])
+# print(dados['NU_IDADE'].value_counts().sort_index().values)
+# print(dados['NU_IDADE'].value_counts().sort_index().values[0])
 chaves = []
 valores = []
 
@@ -72,7 +73,6 @@ ax.plot(chaves, valores)
 
 plt.show()
 
-
 print('9------------------------')
 """
 import matplotlib.pyplot as plt
@@ -88,7 +88,6 @@ ax.plot(ages, total_population)
 plt.show()
 
 """
-
 
 print('10------------------------')
 print('11------------------------')
