@@ -162,7 +162,7 @@ print(dados['NU_NOTA_LC'].quantile(0.9))  # 1 - 0.9 -> 10% ; 10% tem acima deste
 print(dados['NU_NOTA_LC'].quantile(0.1))
 
 print('20------------------------')
-print(dados['NU_NOTA_LC'].plot.box(grid=True, figsize=(8, 6))) # aparece umas grades no gráfico
+print(dados['NU_NOTA_LC'].plot.box(grid=True, figsize=(8, 6)))  # aparece umas grades no gráfico
 print(dados['NU_NOTA_LC'].keys())
 print(dados['NU_NOTA_LC'].keys()[0])
 print(dados['NU_NOTA_LC'].keys()[1])
@@ -184,6 +184,61 @@ ax.plot(nu_nota_lc, valores_y)
 plt.show()
 
 print('21------------------------')
+print(dados[provas].boxplot(grid=True, figsize=(10, 8)))
+
+nomes_e_notas = {'cn': [[], []], 'ch': [[], []], 'mt': [[], []], 'lc': [[], []], 'red': [[], []]}
+notas3 = []
+as_5 = dict()
+
+
+
+"""
+for nome_nota in dados[provas].keys():
+    nome_notas.append(nota)
+
+for nota in dados[provas].values:
+    notas3.append(nota)
+
+
+"""
+print(len(dados[provas]))
+print('1*', dados[provas])
+print('nome*', dados[provas]['NU_NOTA_CN'])
+print('2*', dados[provas].values)
+print('3*', dados[provas].values[0])
+print('4*', dados[provas].values[1])
+
+for disciplina in provas:
+    #print(disciplina)
+    for nome in dados[provas][f'{disciplina}'].keys():
+        pass
+
+
+
+"""
+
+for i in range(len(dados[provas])):
+    for cada in dados[provas][i].keys():
+        nome_notas.append(cada)
+
+for i in range(len(dados[provas])):
+    for cada in dados[provas][i].values:
+        notas3.append(cada)
+
+print('****', nome_notas)
+print('****', notas3)
+
+fig, ax = plt.subplots()
+ax.plot(nome_notas, notas3)
+
+plt.show()
+
+"""
+
+
+
+
+
 print('22------------------------')
 print('23------------------------')
 print('24------------------------')
