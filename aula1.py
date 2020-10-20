@@ -163,6 +163,26 @@ print(dados['NU_NOTA_LC'].quantile(0.1))
 
 print('20------------------------')
 print(dados['NU_NOTA_LC'].plot.box(figsize=(8, 6)))
+print(dados['NU_NOTA_LC'].keys())
+print(dados['NU_NOTA_LC'].keys()[0])
+print(dados['NU_NOTA_LC'].keys()[1])
+print(dados['NU_NOTA_LC'].keys()[2])
+print(dados['NU_NOTA_LC'].values)
+
+nu_nota_lc = []
+valores_y = []
+
+for nota in dados['NU_NOTA_LC'].keys():
+    nu_nota_lc.append(nota)
+
+for val_y in dados['NU_NOTA_LC'].values:
+    valores_y.append(val_y)
+
+fig, ax = plt.subplots()
+ax.plot(nu_nota_lc, valores_y)
+
+plt.show()
+
 
 print('21------------------------')
 print('22------------------------')
