@@ -98,7 +98,8 @@ print('10------------------------')
 print(dados.query('IN_TREINEIRO == 1'))
 
 print('11------------------------')
-print(dados.query('IN_TREINEIRO == 1')['IN_TREINEIRO'])
+print(dados.query('IN_TREINEIRO != 1')['IN_TREINEIRO'])  #  dados.query('IN_TREINEIRO == 1')['IN_TREINEIRO']
+
 
 print('12------------------------')
 print('13------------------------')
