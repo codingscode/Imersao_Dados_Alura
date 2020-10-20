@@ -110,6 +110,22 @@ print(dados.query('IN_TREINEIRO == 1')['NU_IDADE'].value_counts().sort_index())
 print('14------------------------')
 print(dados['NU_NOTA_REDACAO'].hist(bins=20, figsize=(8, 6)))
 
+notas = []
+quantidades = []
+
+for nota in dados.query('IN_TREINEIRO == 1')['NU_IDADE'].value_counts().sort_index().keys():
+    notas.append(nota)
+
+for quantidade in dados.query('IN_TREINEIRO == 1')['NU_IDADE'].value_counts().sort_index().values:
+    quantidades.append(quantidade)
+
+print(notas)
+print(quantidades)
+
+fig, ax = plt.subplots()
+ax.plot(notas, quantidades)
+
+plt.show()
 
 
 
