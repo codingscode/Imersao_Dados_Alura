@@ -154,7 +154,12 @@ print('17------------------------')
 print('desvio padrão: ', dados['NU_NOTA_REDACAO'].std())
 
 print('18------------------------')
+provas = ['NU_NOTA_CN', 'NU_NOTA_CH', 'NU_NOTA_MT', 'NU_NOTA_LC', 'NU_NOTA_REDACAO']
+print(dados[provas].describe())
+
 print('19------------------------')
+print(dados['NU_NOTA_LC'].quantile(0.9))
+
 print('20------------------------')
 print('21------------------------')
 print('22------------------------')
