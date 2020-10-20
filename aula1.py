@@ -73,6 +73,8 @@ ax.plot(chaves, valores)
 
 plt.show()
 
+# desafio3: Adicionar título no gráfico
+
 print('9------------------------')
 """
 import matplotlib.pyplot as plt
@@ -89,8 +91,16 @@ plt.show()
 
 """
 
+print(dados['IN_TREINEIRO'])
+
 print('10------------------------')
+# somente os treineiros
+print(dados.query('IN_TREINEIRO == 1'))
+
 print('11------------------------')
+print(dados.query('IN_TREINEIRO == 1')['IN_TREINEIRO'])
+
 print('12------------------------')
 print('13------------------------')
 print('14------------------------')
+print('15------------------------')
