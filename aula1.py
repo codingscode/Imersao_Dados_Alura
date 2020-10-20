@@ -104,7 +104,15 @@ print('12------------------------')
 print(dados.query('IN_TREINEIRO == 1')['NU_IDADE'].value_counts())
 
 print('13------------------------')
+print(dados.query('IN_TREINEIRO == 1')['NU_IDADE'].value_counts().sort_index())
+# desafio4: Plotar os Histogramas das idades dos treineiros e não treineiros.
+
 print('14------------------------')
+print(dados['NU_NOTA_REDACAO'].hist(bins=20, figsize=(8, 6)))
+
+
+
+
 print('15------------------------')
 print('16------------------------')
 print('17------------------------')
