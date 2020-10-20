@@ -98,10 +98,16 @@ print('10------------------------')
 print(dados.query('IN_TREINEIRO == 1'))
 
 print('11------------------------')
-print(dados.query('IN_TREINEIRO != 1')['IN_TREINEIRO'])  #  dados.query('IN_TREINEIRO == 1')['IN_TREINEIRO']
-
+print(dados.query('IN_TREINEIRO == 1')['NU_IDADE'])
 
 print('12------------------------')
+print(dados.query('IN_TREINEIRO == 1')['NU_IDADE'].value_counts())
+
 print('13------------------------')
 print('14------------------------')
 print('15------------------------')
+print('16------------------------')
+print('17------------------------')
+print('18------------------------')
+print('19------------------------')
+print('20------------------------')
