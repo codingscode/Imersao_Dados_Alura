@@ -127,9 +127,26 @@ ax.plot(notas, quantidades)
 
 plt.show()
 
-
-
 print('15------------------------')
+dados['NU_NOTA_LC'].hist(bins=20, figsize=(8, 6))
+
+notas2 = []
+quantidades2 = []
+
+for nota2 in dados.query('IN_TREINEIRO == 1')['NU_IDADE'].value_counts().sort_index().keys():
+    notas2.append(nota2)
+
+for quantidade2 in dados.query('IN_TREINEIRO == 1')['NU_IDADE'].value_counts().sort_index().values:
+    quantidades2.append(quantidade2)
+
+print(notas2)
+print(quantidades2)
+
+fig, ax = plt.subplots()
+ax.plot(notas2, quantidades2)
+
+plt.show()
+
 print('16------------------------')
 print('17------------------------')
 print('18------------------------')
