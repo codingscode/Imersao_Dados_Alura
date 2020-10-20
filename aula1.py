@@ -41,7 +41,7 @@ print(dados['NU_IDADE'].value_counts().sort_index())
 # desafio2: Descobrir de quais estados são os inscritos com 13 anos.
 
 print('7------------------------')
-print(dados['NU_IDADE'].hist())   # testar no colab ipynb
+print(dados['NU_IDADE'].hist())  # testar no colab ipynb
 print(dados['NU_IDADE'].hist(bins=20, figsize=(10, 8)))  # testar no colab ipynb
 dados['NU_IDADE'].hist()
 print(dados['NU_IDADE'].hist)
@@ -162,7 +162,7 @@ print(dados['NU_NOTA_LC'].quantile(0.9))  # 1 - 0.9 -> 10% ; 10% tem acima deste
 print(dados['NU_NOTA_LC'].quantile(0.1))
 
 print('20------------------------')
-print(dados['NU_NOTA_LC'].plot.box(figsize=(8, 6)))
+print(dados['NU_NOTA_LC'].plot.box(grid=True, figsize=(8, 6))) # aparece umas grades no gráfico
 print(dados['NU_NOTA_LC'].keys())
 print(dados['NU_NOTA_LC'].keys()[0])
 print(dados['NU_NOTA_LC'].keys()[1])
@@ -182,7 +182,6 @@ fig, ax = plt.subplots()
 ax.plot(nu_nota_lc, valores_y)
 
 plt.show()
-
 
 print('21------------------------')
 print('22------------------------')
