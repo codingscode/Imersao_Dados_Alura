@@ -158,9 +158,12 @@ provas = ['NU_NOTA_CN', 'NU_NOTA_CH', 'NU_NOTA_MT', 'NU_NOTA_LC', 'NU_NOTA_REDAC
 print(dados[provas].describe())
 
 print('19------------------------')
-print(dados['NU_NOTA_LC'].quantile(0.9))
+print(dados['NU_NOTA_LC'].quantile(0.9))  # 1 - 0.9 -> 10% ; 10% tem acima deste valor
+print(dados['NU_NOTA_LC'].quantile(0.1))
 
 print('20------------------------')
+print(dados['NU_NOTA_LC'].plot.box(figsize=(8, 6)))
+
 print('21------------------------')
 print('22------------------------')
 print('23------------------------')
