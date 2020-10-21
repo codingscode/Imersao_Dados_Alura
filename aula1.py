@@ -330,8 +330,6 @@ import seaborn as sns
 plt.figure(figsize=(8, 6))
 print(sns.boxplot(x='Q006', y='NU_NOTA_MT', data=dados))
 plt.title('Boxplot das notas de matemática pela renda')
-#print(sns.boxplot(x='Q006', y='NU_NOTA_MT', data=dados).keys())
-#print(sns.boxplot(x='Q006', y='NU_NOTA_MT', data=dados).values)
 
 
 print('1-', dados['Q006'].keys())
@@ -361,9 +359,32 @@ plt.grid(True)
 plt.show()
 
 
-
-
 print('28------------------------')
+renda_ordenada = dados['Q006'].unique()
+renda_ordenada.sort()
+
+print(sns.boxplot(x='Q006', y='NU_NOTA_MT', data=dados, order=renda_ordenada))  # fica ordenado agora
+
+rendas2 = []
+notas_mat2 = []
+
+for renda in dados['Q006'].values:
+    rendas2.append(renda)
+
+for nota in dados['NU_NOTA_MT'].values:
+    notas_mat2.append(nota)
+
+
+plt.figure(figsize=(6, 4))
+plt.plot(rendas2, notas_mat2)
+
+plt.xlabel('rendas')
+plt.ylabel('notas mat')
+plt.grid(True)
+
+plt.show()
+
+
 print('29------------------------')
 print('30------------------------')
 print('31------------------------')
