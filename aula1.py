@@ -412,8 +412,14 @@ plt.grid(True)
 
 plt.show()
 
-
 print('30------------------------')
+
+#desafio7: criar uma função para plotar o boxplot do seaborn
+sns.displot(dados, x='NU_NOTA_TOTAL')
+
+
+
+
 print('31------------------------')
 print('32------------------------')
 print('33------------------------')

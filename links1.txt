@@ -28,7 +28,7 @@ paradas
 
 1: finished
 
-2: 12min
+2: 50min
 
 
 
