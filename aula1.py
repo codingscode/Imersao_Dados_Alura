@@ -415,10 +415,25 @@ plt.show()
 print('30------------------------')
 
 #desafio7: criar uma função para plotar o boxplot do seaborn
-sns.displot(dados, x='NU_NOTA_TOTAL')
+print(sns.displot(dados, x='NU_NOTA_TOTAL'))
 
+notas_totais2 = []
+valores_ntotais = []
 
+for nome in dados['NU_NOTA_TOTAL'].keys():
+    notas_totais2.append(nome)
 
+for valor in dados['NU_NOTA_TOTAL'].values:
+    valores_ntotais.append(valor)
+
+plt.figure(figsize=(6, 4))
+plt.plot(notas_totais2, valores_ntotais)
+
+plt.xlabel('nu_nota_total')
+plt.ylabel('valor')
+plt.grid(True)
+
+plt.show()
 
 print('31------------------------')
 print('32------------------------')
