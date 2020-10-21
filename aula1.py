@@ -388,6 +388,11 @@ print('29------------------------')
 print(dados[provas].sum())  # soma de cada disciplina
 print(dados[provas].sum(axis=1))  # soma invés de coluna, a linha
 
+# criação de coluna
+dados['NU_NOTA_TOTAL'] = dados[provas].sum(axis=1)
+print(dados.head())
+
+
 print('30------------------------')
 print('31------------------------')
 print('32------------------------')
