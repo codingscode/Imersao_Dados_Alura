@@ -327,7 +327,9 @@ print('27------------------------')
 
 import seaborn as sns
 
+plt.figure(figsize=(8, 6))
 print(sns.boxplot(x='Q006', y='NU_NOTA_MT', data=dados))
+plt.title('Boxplot das notas de matemática pela renda')
 #print(sns.boxplot(x='Q006', y='NU_NOTA_MT', data=dados).keys())
 #print(sns.boxplot(x='Q006', y='NU_NOTA_MT', data=dados).values)
 
