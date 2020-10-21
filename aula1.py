@@ -188,14 +188,12 @@ print(dados[provas].boxplot(grid=True, figsize=(10, 8)))
 
 nomes_e_notas = {'cn': [[], []], 'ch': [[], []], 'mt': [[], []], 'lc': [[], []], 'red': [[], []]}
 
-
 print(len(dados[provas]))
 print('1*', dados[provas])
 print('nome*', dados[provas]['NU_NOTA_CN'])
 print('2*', dados[provas].values)
 print('3*', dados[provas].values[0])
 print('4*', dados[provas].values[1])
-
 
 for disciplina in provas:
 
@@ -234,7 +232,6 @@ for disciplina in provas:
         for valor in dados[provas[4]].values:
             nomes_e_notas['red'][1].append(valor)
 
-
 plt.figure(figsize=(6, 4))
 plt.plot(nomes_e_notas['cn'][0], nomes_e_notas['cn'][1])
 plt.plot(nomes_e_notas['ch'][0], nomes_e_notas['ch'][1])
@@ -245,10 +242,9 @@ plt.plot(nomes_e_notas['red'][0], nomes_e_notas['red'][1])
 plt.xlabel('disciplinas')
 plt.ylabel('valores')
 plt.grid(True)
-#plt.savefig('reta-simples-duas.png')
+# plt.savefig('reta-simples-duas.png')
 
 plt.show()
-
 
 """
 
@@ -270,8 +266,8 @@ plt.show()
 
 """
 
-#desafio5: Comparar as distribuições das provas em inglês e espanhol
-#desafio6: Explorar as documentações e visualizações com mathplotlib ou pandas e gerar novas visualizações.
+# desafio5: Comparar as distribuições das provas em inglês e espanhol
+# desafio6: Explorar as documentações e visualizações com mathplotlib ou pandas e gerar novas visualizações.
 
 print('22------------------------')
 # 2ª Aula
@@ -285,13 +281,16 @@ print(dados.query('NU_IDADE <= 14'))
 
 print('24------------------------')
 print(dados.query('NU_IDADE <= 14')['SG_UF_RESIDENCIA'])
-print(dados.query('NU_IDADE <= 14')['SG_UF_RESIDENCIA'].value_counts())
+print(
+    dados.query('NU_IDADE <= 14')['SG_UF_RESIDENCIA'].value_counts(normalize=True))  # traz a proporção para cada estado
 
 print('25------------------------')
+alunos_menor_14 = dados.query('NU_IDADE <= 14')
+print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().plot.pie(figsize=(10, 8)))
+
 print('26------------------------')
 print('27------------------------')
 print('28------------------------')
 print('29------------------------')
 print('30------------------------')
 print('31------------------------')
-
