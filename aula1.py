@@ -331,7 +331,6 @@ plt.figure(figsize=(8, 6))
 print(sns.boxplot(x='Q006', y='NU_NOTA_MT', data=dados))
 plt.title('Boxplot das notas de matemática pela renda')
 
-
 print('1-', dados['Q006'].keys())
 print('2-', dados['Q006'].keys()[0])
 print('3-', dados['Q006'].keys()[1])
@@ -348,7 +347,6 @@ for renda in dados['Q006'].values:
 for nota in dados['NU_NOTA_MT'].values:
     notas_mat.append(nota)
 
-
 plt.figure(figsize=(6, 4))
 plt.plot(rendas, notas_mat)
 
@@ -357,7 +355,6 @@ plt.ylabel('notas mat')
 plt.grid(True)
 
 plt.show()
-
 
 print('28------------------------')
 renda_ordenada = dados['Q006'].unique()
@@ -374,7 +371,6 @@ for renda in dados['Q006'].values:
 for nota in dados['NU_NOTA_MT'].values:
     notas_mat2.append(nota)
 
-
 plt.figure(figsize=(6, 4))
 plt.plot(rendas2, notas_mat2)
 
@@ -385,12 +381,36 @@ plt.grid(True)
 plt.show()
 
 print('29------------------------')
+import matplotlib as mpl
+mpl.rcParams['agg.path.chunksize'] = 10000
+
 print(dados[provas].sum())  # soma de cada disciplina
 print(dados[provas].sum(axis=1))  # soma invés de coluna, a linha
 
 # criação de coluna
 dados['NU_NOTA_TOTAL'] = dados[provas].sum(axis=1)
 print(dados.head())
+
+print(sns.boxplot(x="Q006", y="NU_NOTA_TOTAL", data=dados, order=renda_ordenada))
+plt.title('Boxplot das notas totais pela renda')
+
+rendas3 = []
+notas_totais = []
+
+for renda in dados['Q006'].values:
+    rendas3.append(renda)
+
+for nota in dados['NU_NOTA_TOTAL'].values:
+    notas_totais.append(nota)
+
+plt.figure(figsize=(6, 4))
+plt.plot(rendas3, notas_totais)
+
+plt.xlabel('rendas')
+plt.ylabel('notas totais')
+plt.grid(True)
+
+plt.show()
 
 
 print('30------------------------')
