@@ -309,7 +309,7 @@ plt.grid(True)
 plt.show()
 
 print('26------------------------')
-print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().plot.bar(figsize=(8, 6)))
+print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts(normalize=True).plot.bar(figsize=(8, 6)))
 
 plt.figure(figsize=(6, 4))
 plt.plot(estados, partes)
@@ -320,8 +320,51 @@ plt.grid(True)
 
 plt.show()
 
+# Mega desafio da Thainá: Pegar a amostra completa dos alunos de 13 e 14 anos.
+# Desafio do guilherme: aumentar a amostra para alunos menor de idade e comparar a proporção por estado.
+
 print('27------------------------')
+
+import seaborn as sns
+
+print(sns.boxplot(x='Q006', y='NU_NOTA_MT', data=dados))
+#print(sns.boxplot(x='Q006', y='NU_NOTA_MT', data=dados).keys())
+#print(sns.boxplot(x='Q006', y='NU_NOTA_MT', data=dados).values)
+
+
+print('1-', dados['Q006'].keys())
+print('2-', dados['Q006'].keys()[0])
+print('3-', dados['Q006'].keys()[1])
+print('4-', dados['Q006'].values)
+print('5-', dados['NU_NOTA_MT'].keys())
+print('6-', dados['NU_NOTA_MT'].values)
+
+rendas = []
+notas_mat = []
+
+for renda in dados['Q006'].values:
+    rendas.append(renda)
+
+for nota in dados['NU_NOTA_MT'].values:
+    notas_mat.append(nota)
+
+
+plt.figure(figsize=(6, 4))
+plt.plot(rendas, notas_mat)
+
+plt.xlabel('rendas')
+plt.ylabel('notas mat')
+plt.grid(True)
+
+plt.show()
+
+
+
+
 print('28------------------------')
 print('29------------------------')
 print('30------------------------')
 print('31------------------------')
+print('32------------------------')
+print('33------------------------')
+print('34------------------------')
