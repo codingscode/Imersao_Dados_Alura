@@ -184,7 +184,7 @@ ax.plot(nu_nota_lc, valores_y)
 plt.show()
 
 print('21------------------------')
-print(dados[provas].boxplot(grid=True, figsize=(10, 8)))
+print(dados[provas].boxplot(grid=True, figsize=(8, 6)))
 
 nomes_e_notas = {'cn': [[], []], 'ch': [[], []], 'mt': [[], []], 'lc': [[], []], 'red': [[], []]}
 
@@ -286,7 +286,7 @@ print(
 
 print('25------------------------')
 alunos_menor_14 = dados.query('NU_IDADE <= 14')
-print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().plot.pie(figsize=(10, 8)))
+print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().plot.pie(figsize=(8, 6)))
 print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().keys())
 print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().values)
 
@@ -309,6 +309,17 @@ plt.grid(True)
 plt.show()
 
 print('26------------------------')
+print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().plot.bar(figsize=(8, 6)))
+
+plt.figure(figsize=(6, 4))
+plt.plot(estados, partes)
+
+plt.xlabel('estados')
+plt.ylabel('partes')
+plt.grid(True)
+
+plt.show()
+
 print('27------------------------')
 print('28------------------------')
 print('29------------------------')
