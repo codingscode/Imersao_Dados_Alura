@@ -287,6 +287,26 @@ print(
 print('25------------------------')
 alunos_menor_14 = dados.query('NU_IDADE <= 14')
 print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().plot.pie(figsize=(10, 8)))
+print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().keys())
+print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().values)
+
+estados = []
+partes = []
+
+for estado in alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().keys():
+    estados.append(estado)
+
+for parte in alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().values:
+    partes.append(parte)
+
+plt.figure(figsize=(6, 4))
+plt.plot(estados, partes)
+
+plt.xlabel('estados')
+plt.ylabel('partes')
+plt.grid(True)
+
+plt.show()
 
 print('26------------------------')
 print('27------------------------')
