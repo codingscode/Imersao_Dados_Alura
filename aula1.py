@@ -187,9 +187,6 @@ print('21------------------------')
 print(dados[provas].boxplot(grid=True, figsize=(10, 8)))
 
 nomes_e_notas = {'cn': [[], []], 'ch': [[], []], 'mt': [[], []], 'lc': [[], []], 'red': [[], []]}
-notas3 = []
-as_5 = dict()
-
 
 
 """
@@ -208,11 +205,61 @@ print('2*', dados[provas].values)
 print('3*', dados[provas].values[0])
 print('4*', dados[provas].values[1])
 
+
 for disciplina in provas:
     #print(disciplina)
-    for nome in dados[provas][f'{disciplina}'].keys():
-        pass
+    if disciplina == 'NU_NOTA_CN':
+        for nome in dados[provas[0]].keys():  # for indice in dados[provas][f'{disciplina}']:
+            nomes_e_notas['cn'][0].append(nome)
+            #x.append(indice) #  nomes_e_notas
+        for valor in dados[provas[0]].values:
+            nomes_e_notas['cn'][1].append(valor)
 
+    if disciplina == 'NU_NOTA_CH':
+        for nome in dados[provas[1]].keys():
+            nomes_e_notas['ch'][0].append(nome)
+
+        for valor in dados[provas[1]].values:
+            nomes_e_notas['ch'][1].append(valor)
+
+    if disciplina == 'NU_NOTA_MT':
+        for nome in dados[provas[2]].keys():
+            nomes_e_notas['mt'][0].append(nome)
+
+        for valor in dados[provas[2]].values:
+            nomes_e_notas['mt'][1].append(valor)
+
+    if disciplina == 'NU_NOTA_LC':
+        for nome in dados[provas[3]].keys():
+            nomes_e_notas['lc'][0].append(nome)
+
+        for valor in dados[provas[3]].values:
+            nomes_e_notas['lc'][1].append(valor)
+
+    if disciplina == 'NU_NOTA_REDACAO':
+        for nome in dados[provas[4]].keys():
+            nomes_e_notas['red'][0].append(nome)
+
+        for valor in dados[provas[4]].values:
+            nomes_e_notas['red'][1].append(valor)
+
+
+#print(nomes_e_notas)
+#print(nomes_e_notas['cn'])
+
+plt.figure(figsize=(6, 4))
+plt.plot(nomes_e_notas['cn'][0], nomes_e_notas['cn'][1])
+plt.plot(nomes_e_notas['ch'][0], nomes_e_notas['ch'][1])
+plt.plot(nomes_e_notas['mt'][0], nomes_e_notas['mt'][1])
+plt.plot(nomes_e_notas['lc'][0], nomes_e_notas['lc'][1])
+plt.plot(nomes_e_notas['red'][0], nomes_e_notas['red'][1])
+
+plt.xlabel('disciplinas')
+plt.ylabel('valores')
+plt.grid(True)
+#plt.savefig('reta-simples-duas.png')
+
+plt.show()
 
 
 """

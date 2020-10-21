@@ -13,6 +13,9 @@ video_2:
      https://colab.research.google.com/drive/1AvI0cex0dFrcbob7PEq6NlMDmvTfRWxJ?usp=sharing
      https://www.youtube.com/watch?v=WCF0EGUfVxo
 
+video_3:
+     https://www.alura.com.br/imersao-dados/aula03-distribuicoes-ciencia-de-dados?utm_source=ActiveCampaign&utm_medium=email&utm_content=Terceira+aula+e+desafios+dispon%C3%ADveis%21&utm_campaign=imersao-dados-aula-03
+     https://www.youtube.com/watch?reload=9&v=l49RCfk45GQ&feature=emb_title
 
 
 
