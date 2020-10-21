@@ -281,7 +281,11 @@ print(dados['NU_IDADE'])
 print(dados.query('NU_IDADE == 13'))
 
 print('23------------------------')
+print(dados.query('NU_IDADE <= 14'))
+
 print('24------------------------')
+print(dados.query('NU_IDADE <= 14')['SG_UF_RESIDENCIA'])
+
 print('25------------------------')
 print('26------------------------')
 print('27------------------------')
