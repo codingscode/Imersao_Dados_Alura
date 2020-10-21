@@ -189,15 +189,6 @@ print(dados[provas].boxplot(grid=True, figsize=(10, 8)))
 nomes_e_notas = {'cn': [[], []], 'ch': [[], []], 'mt': [[], []], 'lc': [[], []], 'red': [[], []]}
 
 
-"""
-for nome_nota in dados[provas].keys():
-    nome_notas.append(nota)
-
-for nota in dados[provas].values:
-    notas3.append(nota)
-
-
-"""
 print(len(dados[provas]))
 print('1*', dados[provas])
 print('nome*', dados[provas]['NU_NOTA_CN'])
@@ -207,11 +198,11 @@ print('4*', dados[provas].values[1])
 
 
 for disciplina in provas:
-    #print(disciplina)
+
     if disciplina == 'NU_NOTA_CN':
-        for nome in dados[provas[0]].keys():  # for indice in dados[provas][f'{disciplina}']:
+        for nome in dados[provas[0]].keys():
             nomes_e_notas['cn'][0].append(nome)
-            #x.append(indice) #  nomes_e_notas
+
         for valor in dados[provas[0]].values:
             nomes_e_notas['cn'][1].append(valor)
 
@@ -243,9 +234,6 @@ for disciplina in provas:
         for valor in dados[provas[4]].values:
             nomes_e_notas['red'][1].append(valor)
 
-
-#print(nomes_e_notas)
-#print(nomes_e_notas['cn'])
 
 plt.figure(figsize=(6, 4))
 plt.plot(nomes_e_notas['cn'][0], nomes_e_notas['cn'][1])
@@ -282,11 +270,23 @@ plt.show()
 
 """
 
-
-
-
+#desafio5: Comparar as distribuições das provas em inglês e espanhol
+#desafio6: Explorar as documentações e visualizações com mathplotlib ou pandas e gerar novas visualizações.
 
 print('22------------------------')
+# 2ª Aula
+
+print(dados['NU_IDADE'])
+
+print(dados.query('NU_IDADE == 13'))
+
 print('23------------------------')
 print('24------------------------')
 print('25------------------------')
+print('26------------------------')
+print('27------------------------')
+print('28------------------------')
+print('29------------------------')
+print('30------------------------')
+print('31------------------------')
+

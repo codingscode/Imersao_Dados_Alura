@@ -1,6 +1,7 @@
 ### Imersão Dados Alura
 
-Acompanhamento de imersão.
+Acompanhamento de imersão, commit passo a passo.
+
 
 
 
