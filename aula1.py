@@ -384,8 +384,10 @@ plt.grid(True)
 
 plt.show()
 
-
 print('29------------------------')
+print(dados[provas].sum())  # soma de cada disciplina
+print(dados[provas].sum(axis=1))  # soma invés de coluna, a linha
+
 print('30------------------------')
 print('31------------------------')
 print('32------------------------')
