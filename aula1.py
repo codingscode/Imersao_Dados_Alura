@@ -285,6 +285,7 @@ print(dados.query('NU_IDADE <= 14'))
 
 print('24------------------------')
 print(dados.query('NU_IDADE <= 14')['SG_UF_RESIDENCIA'])
+print(dados.query('NU_IDADE <= 14')['SG_UF_RESIDENCIA'].value_counts())
 
 print('25------------------------')
 print('26------------------------')
