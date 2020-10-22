@@ -382,6 +382,7 @@ plt.show()
 
 print('29------------------------')
 import matplotlib as mpl
+
 mpl.rcParams['agg.path.chunksize'] = 10000
 
 print(dados[provas].sum())  # soma de cada disciplina
@@ -414,7 +415,7 @@ plt.show()
 
 print('30------------------------')
 
-#desafio7: criar uma função para plotar o boxplot do seaborn
+# desafio7: criar uma função para plotar o boxplot do seaborn
 print(sns.displot(dados, x='NU_NOTA_TOTAL'))
 
 notas_totais2 = []
@@ -442,16 +443,15 @@ print(dados.query('NU_NOTA_TOTAL == 0'))
 print('32------------------------')
 print(dados[provas].query('NU_NOTA_TOTAL == 0'))  # aparece NaN
 
-#desafio8: Verificar se quem zerou a prova foi eliminado ou não estava presente
-#desafio9: quem é eliminado tira zero ou será NaN(não teve registro de notas)
+# desafio8: Verificar se quem zerou a prova foi eliminado ou não estava presente
+# desafio9: quem é eliminado tira zero ou será NaN(não teve registro de notas)
 
 print('33------------------------')
 dados_sem_notas_zero = dados.query('NU_NOTA_TOTAL != 0')
 print(dados_sem_notas_zero.head())
 
-
 print('34------------------------')
-print(sns.boxplot(x="Q006", y="NU_NOTA_TOTAL", data=dados_sem_notas_zero,hue='IN_TREINEIRO', order=renda_ordenada))
+print(sns.boxplot(x="Q006", y="NU_NOTA_TOTAL", data=dados_sem_notas_zero, hue='IN_TREINEIRO', order=renda_ordenada))
 plt.title('Boxplot das notas totais pela renda')
 
 print('*', dados_sem_notas_zero.keys())
@@ -479,7 +479,7 @@ def plotar_grafico(chaves, valores):
 
 injetar = plotar_grafico(dados_sem_notas_zero.values[:, 116], dados_sem_notas_zero.values[:, -1])
 
-plt.figure(figsize=(6, 4))
+plt.figure(figsize=(9, 7))
 plt.plot(injetar['chave'], injetar['valor'])
 
 plt.xlabel('Q006')
@@ -487,9 +487,13 @@ plt.ylabel('NU_NOTA_TOTAL')
 plt.grid(True)
 
 plt.show()
-
+# desafio8: Verificar a proporção dos participantes de rendas mais altas e mais baixas como treineiro e não treineiro.
+# desafio9: fazer o mesmo boxplot olhando para a questão 25(Q025?) (tem internet ou não) e fazer uma reflexão sobre o assunto e o contexto de pandemia.
 
 print('35------------------------')
+# 3ª Aula
+print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_TOTAL'))
+
 print('36------------------------')
 print('37------------------------')
 print('38------------------------')
