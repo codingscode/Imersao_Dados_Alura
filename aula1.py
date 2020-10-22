@@ -451,14 +451,13 @@ print(dados_sem_notas_zero.head())
 
 
 print('34------------------------')
-print(sns.boxplot(x="Q006", y="NU_NOTA_TOTAL", data=dados_sem_notas_zero, order=renda_ordenada))
+print(sns.boxplot(x="Q006", y="NU_NOTA_TOTAL", data=dados_sem_notas_zero,hue='IN_TREINEIRO', order=renda_ordenada))
 plt.title('Boxplot das notas totais pela renda')
 
 print('*', dados_sem_notas_zero.keys())
 print('**', dados_sem_notas_zero.keys()[-2])
 print('***', list(dados_sem_notas_zero.keys()))
 print('****', list(dados_sem_notas_zero.keys()).index('Q006'))  # index('Q006') -> 116
-#print('**', dados_sem_notas_zero.keys()['Q025'])  # dá erro
 
 print('*****', dados_sem_notas_zero.values)
 print('******', dados_sem_notas_zero.values[:, 116])  # coluna do Q006
@@ -480,13 +479,11 @@ def plotar_grafico(chaves, valores):
 
 injetar = plotar_grafico(dados_sem_notas_zero.values[:, 116], dados_sem_notas_zero.values[:, -1])
 
-#print('*', plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['chave'])
-#print('**', plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['valor'])
 plt.figure(figsize=(6, 4))
 plt.plot(injetar['chave'], injetar['valor'])
 
-plt.xlabel('eixo_x')
-plt.ylabel('eixo_y')
+plt.xlabel('Q006')
+plt.ylabel('NU_NOTA_TOTAL')
 plt.grid(True)
 
 plt.show()
