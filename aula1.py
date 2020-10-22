@@ -454,6 +454,45 @@ print('34------------------------')
 print(sns.boxplot(x="Q006", y="NU_NOTA_TOTAL", data=dados_sem_notas_zero, order=renda_ordenada))
 plt.title('Boxplot das notas totais pela renda')
 
+print('*', dados_sem_notas_zero.keys())
+print('**', dados_sem_notas_zero.keys()[-2])
+print('***', list(dados_sem_notas_zero.keys()))
+print('****', list(dados_sem_notas_zero.keys()).index('Q006'))  # index('Q006') -> 116
+#print('**', dados_sem_notas_zero.keys()['Q025'])  # dá erro
+
+print('*****', dados_sem_notas_zero.values)
+print('******', dados_sem_notas_zero.values[-1])
+print('*******', dados_sem_notas_zero.values[-2])
+
+
+
+
+"""
+def plotar_grafico(chaves, valores):
+    eixo_x = []
+    eixo_y = []
+
+    for nome in chaves:
+        eixo_x.append(nome)
+
+    for valor in valores:
+        eixo_y.append(valor)
+
+    return {'chave': eixo_x, 'valor': eixo_y}
+
+
+print('*', plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['chave'])
+print('**', plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['valor'])
+plt.plot(plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['chave'], plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['valor'])
+
+plt.xlabel('eixo_x')
+plt.ylabel('eixo_y')
+plt.grid(True)
+
+plt.show()
+"""
+
+
 print('35------------------------')
 print('36------------------------')
 print('37------------------------')
