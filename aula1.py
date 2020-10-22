@@ -436,6 +436,15 @@ plt.grid(True)
 plt.show()
 
 print('31------------------------')
+provas.append('NU_NOTA_TOTAL')
+print(dados.query('NU_NOTA_TOTAL == 0'))
+
 print('32------------------------')
+print(dados[provas].query('NU_NOTA_TOTAL == 0'))  # aparece NaN
+
 print('33------------------------')
 print('34------------------------')
+print('35------------------------')
+print('36------------------------')
+print('37------------------------')
+print('38------------------------')

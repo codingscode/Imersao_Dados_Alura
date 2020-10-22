@@ -22,13 +22,17 @@ video_3:
      https://www.youtube.com/watch?reload=9&v=l49RCfk45GQ&feature=emb_title
 
 
+video_4:
+     https://www.alura.com.br/imersao-dados/aula04-ml-machine-learning?utm_source=ActiveCampaign&utm_medium=email&utm_content=Quarta+aula%3A+Machine+Learning&utm_campaign=%5BIMERS%C3%83O+DADOS%5D+%28Aula%29+04
+     https://www.youtube.com/watch?v=m3Bl1c0EzX4
+
 
 ------------------------------------------------------
 paradas
 
 1: finished
 
-2: 50min
+2: 51min
 
 
 
