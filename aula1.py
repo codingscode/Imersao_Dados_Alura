@@ -442,9 +442,18 @@ print(dados.query('NU_NOTA_TOTAL == 0'))
 print('32------------------------')
 print(dados[provas].query('NU_NOTA_TOTAL == 0'))  # aparece NaN
 
+#desafio8: Verificar se quem zerou a prova foi eliminado ou não estava presente
+#desafio9: quem é eliminado tira zero ou será NaN(não teve registro de notas)
+
 print('33------------------------')
+dados_sem_notas_zero = dados[provas].query('NU_NOTA_TOTAL != 0')
+print(dados_sem_notas_zero.head())
+
+
 print('34------------------------')
 print('35------------------------')
 print('36------------------------')
 print('37------------------------')
 print('38------------------------')
+print('39------------------------')
+print('40------------------------')
