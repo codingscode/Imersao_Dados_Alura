@@ -446,11 +446,14 @@ print(dados[provas].query('NU_NOTA_TOTAL == 0'))  # aparece NaN
 #desafio9: quem é eliminado tira zero ou será NaN(não teve registro de notas)
 
 print('33------------------------')
-dados_sem_notas_zero = dados[provas].query('NU_NOTA_TOTAL != 0')
+dados_sem_notas_zero = dados.query('NU_NOTA_TOTAL != 0')
 print(dados_sem_notas_zero.head())
 
 
 print('34------------------------')
+print(sns.boxplot(x="Q006", y="NU_NOTA_TOTAL", data=dados_sem_notas_zero, order=renda_ordenada))
+plt.title('Boxplot das notas totais pela renda')
+
 print('35------------------------')
 print('36------------------------')
 print('37------------------------')
