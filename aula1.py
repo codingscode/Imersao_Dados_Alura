@@ -461,13 +461,10 @@ print('****', list(dados_sem_notas_zero.keys()).index('Q006'))  # index('Q006') 
 #print('**', dados_sem_notas_zero.keys()['Q025'])  # dá erro
 
 print('*****', dados_sem_notas_zero.values)
-print('******', dados_sem_notas_zero.values[-1])
-print('*******', dados_sem_notas_zero.values[-2])
+print('******', dados_sem_notas_zero.values[:, 116])  # coluna do Q006
+print('*******', dados_sem_notas_zero.values[:, -1])  # última coluna
 
 
-
-
-"""
 def plotar_grafico(chaves, valores):
     eixo_x = []
     eixo_y = []
@@ -481,16 +478,18 @@ def plotar_grafico(chaves, valores):
     return {'chave': eixo_x, 'valor': eixo_y}
 
 
-print('*', plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['chave'])
-print('**', plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['valor'])
-plt.plot(plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['chave'], plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['valor'])
+injetar = plotar_grafico(dados_sem_notas_zero.values[:, 116], dados_sem_notas_zero.values[:, -1])
+
+#print('*', plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['chave'])
+#print('**', plotar_grafico(dados_sem_notas_zero.keys(), dados_sem_notas_zero.values)['valor'])
+plt.figure(figsize=(6, 4))
+plt.plot(injetar['chave'], injetar['valor'])
 
 plt.xlabel('eixo_x')
 plt.ylabel('eixo_y')
 plt.grid(True)
 
 plt.show()
-"""
 
 
 print('35------------------------')
