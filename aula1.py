@@ -492,7 +492,52 @@ plt.show()
 
 print('35------------------------')
 # 3ª Aula
+
 print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_TOTAL'))
+print(dados_sem_notas_zero)
+
+
+#injetar2 = plotar_grafico(dados_sem_notas_zero.keys()[:, -1], dados_sem_notas_zero.values[:, -1])
+
+print('*', list(dados_sem_notas_zero.keys()))
+print('**', dados_sem_notas_zero.values[:, -1])
+
+
+def plotar(chaves, valores):
+    eixo_x = []
+    eixo_y = []
+
+    for chave in chaves.values[:, -1]: # list(dados_sem_notas_zero.keys())
+        chave = 'NU_NOTA_TOTAL'
+        eixo_x.append(chave)
+
+    for valor in valores.values[:, -1]:
+        eixo_y.append(valor)
+
+    return {'chaves': eixo_x, 'valores': eixo_y}
+
+
+injetar2 = plotar(dados_sem_notas_zero, dados_sem_notas_zero)
+print(injetar2['chaves'])
+print(injetar2['valores'])
+
+plt.plot(injetar2['valores'], injetar2['valores'])  # desconsiderar a reta, sujeito a correções
+plt.figure(figsize=(6, 4))
+
+plt.xlabel('nu_nota_total')
+plt.ylabel('count')
+plt.grid(True)
+
+plt.show()
+
+
+"""
+
+
+"""
+
+
+
 
 print('36------------------------')
 print('37------------------------')
