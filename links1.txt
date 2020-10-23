@@ -27,6 +27,13 @@ video_4:
      https://www.youtube.com/watch?v=m3Bl1c0EzX4
 
 
+video_5:
+     https://www.alura.com.br/imersao-dados/aula05-cross-validation-ml?utm_source=ActiveCampaign&utm_medium=email&utm_content=Todas+aulas+dispon%C3%ADveis%21+e+3+recados+importantes%21&utm_campaign=%5BIMERS%C3%83O+DADOS%5D+%28Aula%29+05
+     https://www.youtube.com/watch?v=nJTt_FJvlMk
+
+
+
+
 ------------------------------------------------------
 paradas
 
