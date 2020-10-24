@@ -66,12 +66,14 @@ for valor in dados['NU_IDADE'].value_counts().sort_index().values:
 
 print(chaves)
 print(valores)
-
+"""
 fig, ax = plt.subplots()
 
 ax.plot(chaves, valores)
 
 plt.show()
+
+"""
 
 # desafio3: Adicionar título no gráfico
 
@@ -85,7 +87,7 @@ total_population = [27877307, 24280683, 25258169, 25899454, 24592293, 21217467, 
 
 fig, ax = plt.subplots()
 
-ax.plot(ages, total_population)plt.show()
+ax.plot(ages, total_population)#plt.show()
 
 """
 
@@ -119,11 +121,13 @@ for quantidade in dados.query('IN_TREINEIRO == 1')['NU_IDADE'].value_counts().so
 
 print(notas)
 print(quantidades)
-
+"""
 fig, ax = plt.subplots()
 ax.plot(notas, quantidades)
 
 plt.show()
+
+"""
 
 print('15------------------------')
 dados['NU_NOTA_LC'].hist(bins=20, figsize=(8, 6))
@@ -140,10 +144,13 @@ for quantidade2 in dados.query('IN_TREINEIRO == 1')['NU_IDADE'].value_counts().s
 print(notas2)
 print(quantidades2)
 
+"""
 fig, ax = plt.subplots()
 ax.plot(notas2, quantidades2)
 
 plt.show()
+
+"""
 
 print('16------------------------')
 print('média: ', dados['NU_NOTA_REDACAO'].mean())
@@ -176,13 +183,16 @@ for nota in dados['NU_NOTA_LC'].keys():
 for val_y in dados['NU_NOTA_LC'].values:
     valores_y.append(val_y)
 
+"""
 fig, ax = plt.subplots()
 ax.plot(nu_nota_lc, valores_y)
 
 plt.show()
 
+"""
+
 print('21------------------------')
-print(dados[provas].boxplot(grid=True, figsize=(8, 6)))
+#print(dados[provas].boxplot(grid=True, figsize=(8, 6)))
 
 nomes_e_notas = {'cn': [[], []], 'ch': [[], []], 'mt': [[], []], 'lc': [[], []], 'red': [[], []]}
 
@@ -237,12 +247,15 @@ plt.plot(nomes_e_notas['mt'][0], nomes_e_notas['mt'][1])
 plt.plot(nomes_e_notas['lc'][0], nomes_e_notas['lc'][1])
 plt.plot(nomes_e_notas['red'][0], nomes_e_notas['red'][1])
 
+"""
 plt.xlabel('disciplinas')
 plt.ylabel('valores')
 plt.grid(True)
 # plt.savefig('reta-simples-duas.png')
 
 plt.show()
+
+"""
 
 """
 
@@ -258,7 +271,7 @@ print('****', nome_notas)
 print('****', notas3)
 
 fig, ax = plt.subplots()
-ax.plot(nome_notas, notas3)plt.show()
+ax.plot(nome_notas, notas3)#plt.show()
 
 """
 
@@ -295,6 +308,7 @@ for estado in alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().keys():
 for parte in alunos_menor_14['SG_UF_RESIDENCIA'].value_counts().values:
     partes.append(parte)
 
+"""
 plt.figure(figsize=(6, 4))
 plt.plot(estados, partes)
 
@@ -303,10 +317,13 @@ plt.ylabel('partes')
 plt.grid(True)
 
 plt.show()
+
+"""
 
 print('26------------------------')
 print(alunos_menor_14['SG_UF_RESIDENCIA'].value_counts(normalize=True).plot.bar(figsize=(8, 6)))
 
+"""
 plt.figure(figsize=(6, 4))
 plt.plot(estados, partes)
 
@@ -315,6 +332,8 @@ plt.ylabel('partes')
 plt.grid(True)
 
 plt.show()
+
+"""
 
 # Mega desafio da Thainá: Pegar a amostra completa dos alunos de 13 e 14 anos.
 # Desafio do guilherme: aumentar a amostra para alunos menor de idade e comparar a proporção por estado.
@@ -343,6 +362,7 @@ for renda in dados['Q006'].values:
 for nota in dados['NU_NOTA_MT'].values:
     notas_mat.append(nota)
 
+"""
 plt.figure(figsize=(6, 4))
 plt.plot(rendas, notas_mat)
 
@@ -351,6 +371,8 @@ plt.ylabel('notas mat')
 plt.grid(True)
 
 plt.show()
+
+"""
 
 print('28------------------------')
 renda_ordenada = dados['Q006'].unique()
@@ -367,6 +389,7 @@ for renda in dados['Q006'].values:
 for nota in dados['NU_NOTA_MT'].values:
     notas_mat2.append(nota)
 
+"""
 plt.figure(figsize=(6, 4))
 plt.plot(rendas2, notas_mat2)
 
@@ -375,6 +398,8 @@ plt.ylabel('notas mat')
 plt.grid(True)
 
 plt.show()
+
+"""
 
 print('29------------------------')
 import matplotlib as mpl
@@ -400,6 +425,7 @@ for renda in dados['Q006'].values:
 for nota in dados['NU_NOTA_TOTAL'].values:
     notas_totais.append(nota)
 
+"""
 plt.figure(figsize=(6, 4))
 plt.plot(rendas3, notas_totais)
 
@@ -408,6 +434,8 @@ plt.ylabel('notas totais')
 plt.grid(True)
 
 plt.show()
+
+"""
 
 print('30------------------------')
 
@@ -426,11 +454,14 @@ for valor in dados['NU_NOTA_TOTAL'].values:
 plt.figure(figsize=(6, 4))
 plt.plot(notas_totais2, valores_ntotais)
 
+"""
 plt.xlabel('nu_nota_total')
 plt.ylabel('valor')
 plt.grid(True)
 
 plt.show()
+
+"""
 
 print('31------------------------')
 provas.append('NU_NOTA_TOTAL')
@@ -475,6 +506,7 @@ def plotar_grafico(chaves, valores):
 
 injetar = plotar_grafico(dados_sem_notas_zero.values[:, 116], dados_sem_notas_zero.values[:, -1])
 
+"""
 plt.figure(figsize=(9, 7))
 plt.plot(injetar['chave'], injetar['valor'])
 
@@ -483,6 +515,9 @@ plt.ylabel('NU_NOTA_TOTAL')
 plt.grid(True)
 
 plt.show()
+
+"""
+
 # desafio8: Verificar a proporção dos participantes de rendas mais altas e mais baixas como treineiro e não treineiro.
 # desafio9: fazer o mesmo boxplot olhando para a questão 25(Q025?) (tem internet ou não) e fazer uma reflexão sobre o assunto e o contexto de pandemia.
 
@@ -513,6 +548,7 @@ injetar2 = plotar(dados_sem_notas_zero, dados_sem_notas_zero)
 # print(injetar2['chaves'])
 # print(injetar2['valores'])
 
+"""
 plt.plot(injetar2['chaves'], injetar2['valores'])  # desconsiderar a reta, sujeito a correções
 plt.figure(figsize=(6, 4))
 
@@ -521,6 +557,8 @@ plt.ylabel('count')
 plt.grid(True)
 
 plt.show()
+
+"""
 
 
 print('36------------------------')
@@ -556,6 +594,7 @@ print(len(x))
 print(y)
 print(len(y))
 
+"""
 plt.plot(x, y)
 plt.figure(figsize=(6, 4))
 
@@ -563,6 +602,8 @@ plt.xlabel('nu_nota_mt')
 plt.ylabel('count')
 plt.grid(True)
 plt.show()
+
+"""
 
 print('37------------------------')
 print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_LC'))
@@ -590,6 +631,7 @@ injetar3 = plotar3(dados_sem_notas_zero['NU_NOTA_LC'].value_counts())
 print(injetar3['e_x'])
 print(injetar3['e_y'])
 
+"""
 plt.plot(injetar3['e_x'], injetar3['e_y'])  # corrigindo
 plt.figure(figsize=(6, 4))
 
@@ -597,6 +639,8 @@ plt.xlabel('nu_nota_lc')
 plt.ylabel('count')
 plt.grid(True)
 plt.show()
+
+"""
 
 print('38------------------------')
 # desafio10 : Plotar as médias, medianas e moda nas notas de LC e MT(matplotlib linha vertical)
@@ -658,8 +702,10 @@ plt.ylabel('NU_NOTA_LC')
 plt.grid(True)
 plt.show()
 
-
 print('40------------------------')
+print(sns.pairplot(dados_sem_notas_zero[provas]))
+print(dados_sem_notas_zero[provas])
+
 print('41------------------------')
 print('42------------------------')
 print('43------------------------')
