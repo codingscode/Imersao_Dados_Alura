@@ -561,14 +561,45 @@ print(len(y))
 plt.plot(x, y)
 plt.figure(figsize=(6, 4))
 
-plt.xlabel('nu_nota_total')
+plt.xlabel('nu_nota_mt')
 plt.ylabel('count')
 plt.grid(True)
 plt.show()
 
-
-
 print('37------------------------')
+print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_LC'))
+print('*1*', dados_sem_notas_zero['NU_NOTA_LC'].value_counts())
+print('*2*', list(dados_sem_notas_zero['NU_NOTA_LC'].value_counts().keys()))
+print('*3*', list(dados_sem_notas_zero['NU_NOTA_LC'].value_counts()))
+
+
+def plotar3(iteravel):
+    res = {'e_x': [], 'e_y': []}
+    for cada in list(iteravel.keys()):
+        if isinstance(cada, int) or isinstance(cada, float):
+            res['e_x'].append(cada)
+        res['e_x'].append(0)
+
+    for cada in list(iteravel):
+        if isinstance(cada, int):
+            res['e_y'].append(cada)
+        res['e_y'].append(0)
+
+    return res
+
+
+injetar3 = plotar3(dados_sem_notas_zero['NU_NOTA_LC'].value_counts())
+print(injetar3['e_x'])
+print(injetar3['e_y'])
+
+plt.plot(x, y)
+plt.figure(figsize=(6, 4))
+
+plt.xlabel('nu_nota_lc')
+plt.ylabel('count')
+plt.grid(True)
+plt.show()
+
 print('38------------------------')
 print('39------------------------')
 print('40------------------------')
