@@ -603,7 +603,7 @@ plt.show()
 print('38------------------------')
 # desafio10 : Plotar as médias, medianas e moda nas notas de LC e MT(matplotlib linha vertical)
 
-print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_TOTAL', hue='Q025'))
+print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_TOTAL', hue='Q025', kde=True))  # kde cria uma linha
 print('*1*', dados_sem_notas_zero['NU_NOTA_TOTAL'].value_counts())
 print('*2*', list(dados_sem_notas_zero['NU_NOTA_TOTAL'].value_counts().keys()))
 print('*3*', list(dados_sem_notas_zero['NU_NOTA_TOTAL'].value_counts()))
