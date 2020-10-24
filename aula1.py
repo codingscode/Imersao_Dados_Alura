@@ -619,7 +619,7 @@ plt.grid(True)
 plt.show()
 
 print('39------------------------')
-
+plt.figure(figsize=(8, 8))
 sns.scatterplot(data=dados_sem_notas_zero, x='NU_NOTA_MT', y='NU_NOTA_LC', )
 
 print('1**', dados_sem_notas_zero['NU_NOTA_MT'])

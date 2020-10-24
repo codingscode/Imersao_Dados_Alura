@@ -4,7 +4,6 @@
     <list default="true" id="68586b21-46c2-4461-889a-c9391974269e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aula1.py" beforeDir="false" afterPath="$PROJECT_DIR$/aula1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste4.py" beforeDir="false" afterPath="$PROJECT_DIR$/teste4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +39,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.teste4">
+  <component name="RunManager" selected="Python.aula1">
     <configuration name="aula1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="alura_imersao_dados" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,8 +126,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.teste4" />
         <item itemvalue="Python.aula1" />
+        <item itemvalue="Python.teste4" />
         <item itemvalue="Python.teste3" />
         <item itemvalue="Python.teste2" />
       </list>
