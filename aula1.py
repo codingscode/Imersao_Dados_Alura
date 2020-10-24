@@ -85,8 +85,7 @@ total_population = [27877307, 24280683, 25258169, 25899454, 24592293, 21217467, 
 
 fig, ax = plt.subplots()
 
-ax.plot(ages, total_population)
-plt.show()
+ax.plot(ages, total_population)plt.show()
 
 """
 
@@ -259,8 +258,7 @@ print('****', nome_notas)
 print('****', notas3)
 
 fig, ax = plt.subplots()
-ax.plot(nome_notas, notas3)
-plt.show()
+ax.plot(nome_notas, notas3)plt.show()
 
 """
 
@@ -603,7 +601,7 @@ plt.show()
 print('38------------------------')
 # desafio10 : Plotar as médias, medianas e moda nas notas de LC e MT(matplotlib linha vertical)
 
-print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_TOTAL', hue='Q025', kde=True))  # kde cria uma linha
+print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_TOTAL', hue='Q025', kde=True, cumulative=True))  # parametro stat para 'probability', 'density' nao estao funcionando grafico doido
 print('*1*', dados_sem_notas_zero['NU_NOTA_TOTAL'].value_counts())
 print('*2*', list(dados_sem_notas_zero['NU_NOTA_TOTAL'].value_counts().keys()))
 print('*3*', list(dados_sem_notas_zero['NU_NOTA_TOTAL'].value_counts()))
@@ -612,7 +610,7 @@ injetar4 = plotar3(dados_sem_notas_zero['NU_NOTA_TOTAL'].value_counts())
 print(injetar4['e_x'])
 print(injetar4['e_y'])
 
-plt.plot(injetar4['e_x'],injetar4['e_y'])  # os que tem internet e os que não tem internet
+plt.plot(injetar4['e_x'], injetar4['e_y'])  # os que tem internet e os que não tem internet
 plt.figure(figsize=(6, 4))
 
 plt.xlabel('NU_NOTA_TOTAL')
