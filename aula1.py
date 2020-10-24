@@ -619,6 +619,44 @@ plt.grid(True)
 plt.show()
 
 print('39------------------------')
+
+sns.scatterplot(data=dados_sem_notas_zero, x='NU_NOTA_MT', y='NU_NOTA_LC', )
+
+print('1**', dados_sem_notas_zero['NU_NOTA_MT'])
+print('2**', list(dados_sem_notas_zero['NU_NOTA_MT']))
+print('3**', dados_sem_notas_zero['NU_NOTA_LC'])
+print('4**', list(dados_sem_notas_zero['NU_NOTA_LC']))
+
+
+def plotar4(iteravel1, iteravel2):
+    res = {'eixo_x': [], 'eixo_y': []}
+
+    for cada in list(iteravel1):
+        if isinstance(cada, int) or isinstance(cada, float):
+            res['eixo_x'].append(cada)
+        res['eixo_x'].append(0)
+
+    for cada in list(iteravel2):
+        if isinstance(cada, int) or isinstance(cada, float):
+            res['eixo_y'].append(cada)
+        res['eixo_y'].append(0)
+
+    return res
+
+
+injetar5 = plotar4(dados_sem_notas_zero['NU_NOTA_MT'], dados_sem_notas_zero['NU_NOTA_LC'])
+print(injetar5['eixo_x'])
+print(injetar5['eixo_y'])
+
+plt.scatter(injetar5['eixo_x'], injetar5['eixo_y'], c='b', alpha=0.6, edgecolors='grey')
+plt.figure(figsize=(6, 4))
+
+plt.xlabel('NU_NOTA_MT')
+plt.ylabel('NU_NOTA_LC')
+plt.grid(True)
+plt.show()
+
+
 print('40------------------------')
 print('41------------------------')
 print('42------------------------')
