@@ -705,8 +705,12 @@ plt.show()
 print('40------------------------')
 print(sns.pairplot(dados_sem_notas_zero[provas]))
 print(dados_sem_notas_zero[provas])
+# pegar as 6 disciplinas e fazer comparação de gráficos em pares
 
 print('41------------------------')
+correlacao = dados_sem_notas_zero[provas].corr()
+print(correlacao)
+
 print('42------------------------')
 print('43------------------------')
 print('44------------------------')
