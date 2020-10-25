@@ -708,10 +708,19 @@ print(dados_sem_notas_zero[provas])
 # pegar as 6 disciplinas e fazer comparação de gráficos em pares
 
 print('41------------------------')
-correlacao = dados_sem_notas_zero[provas].corr()
+correlacao = dados_sem_notas_zero[provas].corr()  # vai de -1 a 1
 print(correlacao)
 
 print('42------------------------')
+print(sns.heatmap(correlacao, cmap='Blues'))
+
+print('*', correlacao.keys())
+print('**', list(correlacao))
+
+print('***', correlacao.values)
+print('****', list(correlacao.values))
+print('*****', correlacao.values[:, 0])
+
 print('43------------------------')
 print('44------------------------')
 print('45------------------------')
