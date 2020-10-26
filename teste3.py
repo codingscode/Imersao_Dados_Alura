@@ -1,10 +1,12 @@
 
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
-"""
-Mais de uma linha no gráfico
-"""
+
+#Mais de uma linha no gráfico
+
 x = np.arange(1, 11)
 print(x)
 
@@ -24,6 +26,7 @@ plt.grid(True)
 #plt.savefig('reta-simples-duas.png')
 
 plt.show()
+"""
 
 """
 
@@ -48,6 +51,13 @@ plt.show()
 """
 
 
+import numpy as np
+import seaborn as sns
+import matplotlib.pylab as plt
 
+data = np.random.rand(8, 8)
+ax = sns.heatmap(data, linewidth=0.3)
+plt.show()
 
+print(data)
 

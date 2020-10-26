@@ -720,6 +720,17 @@ print('**', list(correlacao))
 print('***', correlacao.values)
 print('****', list(correlacao.values))
 print('*****', correlacao.values[:, 0])
+print('*****', correlacao.values[:, 1])
+print('*****', correlacao.values[:, 2])
+print('*****', correlacao.values[:, 3])
+print('*****', correlacao.values[:, 4])
+print('*****', correlacao.values[:, 5])
+
+eixo_x = ['NU_NOTA_CN', 'NU_NOTA_CH', 'NU_NOTA_MT', 'NU_NOTA_LC', 'NU_NOTA_REDACAO', 'NU_NOTA_TOTAL']
+eixo_y = [correlacao.values[:, 0], correlacao.values[:, 1], correlacao.values[:, 2], correlacao.values[:, 3], correlacao.values[:, 4], correlacao.values[:, 5]]
+
+ax = sns.heatmap(eixo_y, linewidth=0.2)
+plt.show()
 
 print('43------------------------')
 print('44------------------------')
