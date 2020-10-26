@@ -703,8 +703,8 @@ plt.grid(True)
 plt.show()
 
 print('40------------------------')
-print(sns.pairplot(dados_sem_notas_zero[provas]))
-print(dados_sem_notas_zero[provas])
+#print(sns.pairplot(dados_sem_notas_zero[provas]))
+#print(dados_sem_notas_zero[provas])
 # pegar as 6 disciplinas e fazer comparação de gráficos em pares
 
 print('41------------------------')
@@ -729,7 +729,7 @@ print('*****', correlacao.values[:, 5])
 eixo_x = ['NU_NOTA_CN', 'NU_NOTA_CH', 'NU_NOTA_MT', 'NU_NOTA_LC', 'NU_NOTA_REDACAO', 'NU_NOTA_TOTAL']
 eixo_y = [correlacao.values[:, 0], correlacao.values[:, 1], correlacao.values[:, 2], correlacao.values[:, 3], correlacao.values[:, 4], correlacao.values[:, 5]]
 
-ax = sns.heatmap(eixo_y, linewidth=0.2, cmap='Blues', center=0)
+ax = sns.heatmap(eixo_y, linewidth=0.2, cmap='Blues', center=0, annot=True)
 plt.show()
 
 print('43------------------------')
