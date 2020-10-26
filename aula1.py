@@ -742,6 +742,15 @@ notas_saida = dados_sem_notas_zero[provas_saida]
 print(notas_entrada)
 
 print('44------------------------')
+x = notas_entrada
+y = notas_saida
+
+from sklearn.model_selection import train_test_split
+
+print(train_test_split(x, y))
+
+
+
 print('45------------------------')
 print('46------------------------')
 print('47------------------------')
