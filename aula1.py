@@ -747,11 +747,13 @@ y = notas_saida
 
 from sklearn.model_selection import train_test_split
 
-print(train_test_split(x, y))
-
+x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size=0.25)
+print(x_treino.head())  # cada vez que é executado aparece uma tabela diferente, pois há um parametro random
 
 
 print('45------------------------')
 print('46------------------------')
 print('47------------------------')
 print('48------------------------')
+print('49------------------------')
+print('50------------------------')
