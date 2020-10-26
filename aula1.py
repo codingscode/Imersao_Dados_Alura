@@ -729,7 +729,7 @@ print('*****', correlacao.values[:, 5])
 eixo_x = ['NU_NOTA_CN', 'NU_NOTA_CH', 'NU_NOTA_MT', 'NU_NOTA_LC', 'NU_NOTA_REDACAO', 'NU_NOTA_TOTAL']
 eixo_y = [correlacao.values[:, 0], correlacao.values[:, 1], correlacao.values[:, 2], correlacao.values[:, 3], correlacao.values[:, 4], correlacao.values[:, 5]]
 
-ax = sns.heatmap(eixo_y, linewidth=0.2)
+ax = sns.heatmap(eixo_y, linewidth=0.2, cmap='Blues')
 plt.show()
 
 print('43------------------------')
