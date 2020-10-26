@@ -750,9 +750,19 @@ from sklearn.model_selection import train_test_split
 SEED = 4321
 x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size=0.25, random_state=SEED)  # agora é constante
 print(x_treino.head())
-
+print(x_treino.shape)
+print(len(x_treino.shape))
+print(len(y_treino.shape))
+print(len(y_teste.shape))
 
 print('45------------------------')
+from sklearn.svm import LinearSVR
+
+modelo = LinearSVR(random_state = SEED)   # há erro pois na tabela há NaN
+modelo.fit(x_treino, y_treino)
+
+
+
 print('46------------------------')
 print('47------------------------')
 print('48------------------------')
