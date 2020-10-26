@@ -39,10 +39,11 @@ paradas
 
 1: finished
 
-2: 1h6min
+2: finished
 
-3: 1h1min
+3: finished
 
+4: 6min
 
 
 

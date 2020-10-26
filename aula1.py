@@ -733,5 +733,16 @@ ax = sns.heatmap(eixo_y, linewidth=0.2, cmap='Blues', center=0, annot=True)
 plt.show()
 
 print('43------------------------')
+provas_entrada = ['NU_NOTA_CH', 'NU_NOTA_LC', 'NU_NOTA_CN', 'NU_NOTA_REDACAO']
+provas_saida = 'NU_NOTA_MT'
+
+notas_entrada = dados_sem_notas_zero[provas_entrada]
+notas_saida = dados_sem_notas_zero[provas_saida]
+
+print(notas_entrada)
+
 print('44------------------------')
 print('45------------------------')
+print('46------------------------')
+print('47------------------------')
+print('48------------------------')
