@@ -775,6 +775,9 @@ plt.ylim(-50, 1050)
 plt.show()
 
 print('47------------------------')
+sns.scatterplot(x=y_teste, y=y_teste - x_teste.mean(axis=1))
+plt.show()
+
 print('48------------------------')
 print('49------------------------')
 print('50------------------------')
