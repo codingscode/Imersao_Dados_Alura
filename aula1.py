@@ -783,10 +783,14 @@ resultados = pd.DataFrame()
 resultados['Real'] = y_teste
 resultados['Previsao'] = predicoes_matematica
 resultados['diferenca'] = resultados['Real'] - resultados['Previsao']
+resultados['quadrado_diferenca'] = (resultados['Real'] - resultados['Previsao'])**2
 
 print(resultados)
 
 print('49------------------------')
+print(resultados['quadrado_diferenca'].mean())
+print(resultados['quadrado_diferenca'].mean() ** 0.5)
+
 print('50------------------------')
 print('51------------------------')
 print('52------------------------')
