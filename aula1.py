@@ -3,6 +3,8 @@ import pandas as pd, numpy, matplotlib.pyplot as plt
 # fonte = 'https://github.com/alura-cursos/imersao-dados-2-2020/blob/master/MICRODADOS_ENEM_2019_SAMPLE_43278.csv?raw=true'
 
 # forma alternativa se já baixado
+
+
 fonte = './nao_enviar/MICRODADOS_ENEM_2019_SAMPLE_43278.csv'
 
 pd.options.display.width = None  # todas as colunas horizontalmente
@@ -192,7 +194,7 @@ plt.show()
 """
 
 print('21------------------------')
-#print(dados[provas].boxplot(grid=True, figsize=(8, 6)))
+# print(dados[provas].boxplot(grid=True, figsize=(8, 6)))
 
 nomes_e_notas = {'cn': [[], []], 'ch': [[], []], 'mt': [[], []], 'lc': [[], []], 'red': [[], []]}
 
@@ -560,7 +562,6 @@ plt.show()
 
 """
 
-
 print('36------------------------')
 print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_MT'))
 print('**', dados_sem_notas_zero['NU_NOTA_MT'])
@@ -645,7 +646,8 @@ plt.show()
 print('38------------------------')
 # desafio10 : Plotar as médias, medianas e moda nas notas de LC e MT(matplotlib linha vertical)
 
-print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_TOTAL', hue='Q025', kde=True, cumulative=True))  # parametro stat para 'probability', 'density' nao estao funcionando grafico doido
+print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_TOTAL', hue='Q025', kde=True,
+                   cumulative=True))  # parametro stat para 'probability', 'density' nao estao funcionando grafico doido
 print('*1*', dados_sem_notas_zero['NU_NOTA_TOTAL'].value_counts())
 print('*2*', list(dados_sem_notas_zero['NU_NOTA_TOTAL'].value_counts().keys()))
 print('*3*', list(dados_sem_notas_zero['NU_NOTA_TOTAL'].value_counts()))
@@ -703,8 +705,8 @@ plt.grid(True)
 plt.show()
 
 print('40------------------------')
-#print(sns.pairplot(dados_sem_notas_zero[provas]))
-#print(dados_sem_notas_zero[provas])
+# print(sns.pairplot(dados_sem_notas_zero[provas]))
+# print(dados_sem_notas_zero[provas])
 # pegar as 6 disciplinas e fazer comparação de gráficos em pares
 
 print('41------------------------')
@@ -727,17 +729,18 @@ print('*****', correlacao.values[:, 4])
 print('*****', correlacao.values[:, 5])
 
 eixo_x = ['NU_NOTA_CN', 'NU_NOTA_CH', 'NU_NOTA_MT', 'NU_NOTA_LC', 'NU_NOTA_REDACAO', 'NU_NOTA_TOTAL']
-eixo_y = [correlacao.values[:, 0], correlacao.values[:, 1], correlacao.values[:, 2], correlacao.values[:, 3], correlacao.values[:, 4], correlacao.values[:, 5]]
+eixo_y = [correlacao.values[:, 0], correlacao.values[:, 1], correlacao.values[:, 2], correlacao.values[:, 3],
+          correlacao.values[:, 4], correlacao.values[:, 5]]
 
 ax = sns.heatmap(eixo_y, linewidth=0.2, cmap='Blues', center=0, annot=True)
 plt.show()
 
 print('43------------------------')
 provas_entrada = ['NU_NOTA_CH', 'NU_NOTA_LC', 'NU_NOTA_CN', 'NU_NOTA_REDACAO']
-provas_saida = 'NU_NOTA_MT'
-
+prova_saida = 'NU_NOTA_MT'
+dados_sem_notas_zero = dados_sem_notas_zero[provas].dropna()
 notas_entrada = dados_sem_notas_zero[provas_entrada]
-notas_saida = dados_sem_notas_zero[provas_saida]
+notas_saida = dados_sem_notas_zero[prova_saida]
 
 print(notas_entrada)
 
@@ -749,19 +752,22 @@ from sklearn.model_selection import train_test_split
 
 SEED = 4321
 x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size=0.25, random_state=SEED)  # agora é constante
+
 print(x_treino.head())
 print(x_treino.shape)
-print(len(x_treino.shape))
-print(len(y_treino.shape))
+print(len(y_treino))
+print(x_teste.shape)
 print(len(y_teste.shape))
 
 print('45------------------------')
 from sklearn.svm import LinearSVR
 
-modelo = LinearSVR(random_state = SEED)   # há erro pois na tabela há NaN
+modelo = LinearSVR(random_state=SEED)  # há erro pois na tabela há NaN
+
 modelo.fit(x_treino, y_treino)
 
-
+print(modelo.predict(x_teste))
+print(y_teste[:5])
 
 print('46------------------------')
 print('47------------------------')
