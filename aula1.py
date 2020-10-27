@@ -779,5 +779,18 @@ sns.scatterplot(x=y_teste, y=y_teste - x_teste.mean(axis=1))
 plt.show()
 
 print('48------------------------')
+resultados = pd.DataFrame()
+resultados['Real'] = y_teste
+resultados['Previsao'] = predicoes_matematica
+resultados['diferenca'] = resultados['Real'] - resultados['Previsao']
+
+print(resultados)
+
 print('49------------------------')
 print('50------------------------')
+print('51------------------------')
+print('52------------------------')
+print('53------------------------')
+print('54------------------------')
+print('55------------------------')
+print('56------------------------')
