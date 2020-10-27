@@ -762,14 +762,16 @@ print(len(y_teste.shape))
 print('45------------------------')
 from sklearn.svm import LinearSVR
 
-modelo = LinearSVR(random_state=SEED)  # há erro pois na tabela há NaN
-
+modelo = LinearSVR(random_state=SEED, max_iter=1000)  # há erro pois na tabela há NaN
 modelo.fit(x_treino, y_treino)
+predicoes_matematica = modelo.predict(x_teste)
 
-print(modelo.predict(x_teste))
 print(y_teste[:5])
 
 print('46------------------------')
+sns.scatterplot(x=predicoes_matematica, y=y_teste)
+plt.show()
+
 print('47------------------------')
 print('48------------------------')
 print('49------------------------')
