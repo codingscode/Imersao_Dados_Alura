@@ -792,6 +792,17 @@ print(resultados['quadrado_diferenca'].mean())
 print(resultados['quadrado_diferenca'].mean() ** 0.5)
 
 print('50------------------------')
+from sklearn.dummy import DummyRegressor
+
+modelo_dummy = DummyRegressor()
+modelo_dummy.fit(x_treino, y_treino)
+dummy_predicoes = modelo_dummy.predict(x_teste)
+
+from sklearn.metrics import mean_squared_error
+
+print(mean_squared_error(y_teste, dummy_predicoes))
+
+
 print('51------------------------')
 print('52------------------------')
 print('53------------------------')
