@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68586b21-46c2-4461-889a-c9391974269e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/aula1.py" beforeDir="false" afterPath="$PROJECT_DIR$/aula1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teste5.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +26,11 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Pib\Backup\Arquivo pessoal\TI\Minha Programação\INGLES\linguagem\javascript\Meu vue\JS ALL METHODS\alura_imersao_dados\nao_enviar" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -60,7 +66,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="teste2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="final_simplificado" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="alura_imersao_dados" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,7 +78,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teste2.py" />
+      <option name="SCRIPT_NAME" value="C:\Pib\Backup\Arquivo pessoal\TI\Minha Programação\INGLES\linguagem\javascript\Meu vue\JS ALL METHODS\alura_imersao_dados\nao_enviar\final_simplificado.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -135,7 +141,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teste5.py" />
+      <option name="SCRIPT_NAME" value="C:\Pib\Backup\Arquivo pessoal\TI\Minha Programação\INGLES\linguagem\javascript\Meu vue\JS ALL METHODS\alura_imersao_dados\nao_enviar\final_simplificado.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,10 +153,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.aula1" />
+        <item itemvalue="Python.final_simplificado" />
         <item itemvalue="Python.teste5" />
         <item itemvalue="Python.teste3" />
         <item itemvalue="Python.teste4" />
-        <item itemvalue="Python.teste2" />
       </list>
     </recent_temporary>
   </component>

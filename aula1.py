@@ -770,6 +770,8 @@ print(y_teste[:5])
 
 print('46------------------------')
 sns.scatterplot(x=predicoes_matematica, y=y_teste)
+plt.xlim(-50, 1050)
+plt.ylim(-50, 1050)
 plt.show()
 
 print('47------------------------')
