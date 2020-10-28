@@ -576,24 +576,7 @@ print('8*', list(dados_sem_notas_zero['NU_NOTA_MT']))
 print('9*', list(dados_sem_notas_zero['NU_NOTA_MT'].value_counts())[0])
 print('10*', len(list(dados_sem_notas_zero['NU_NOTA_TOTAL'].value_counts().keys())))
 print('11*', len(list(dados_sem_notas_zero['NU_NOTA_MT'].values)))
-
-x = []
-y = []
-
-for cada in list(dados_sem_notas_zero['NU_NOTA_MT'].value_counts().keys()):
-    if isinstance(cada, int) or isinstance(cada, float):
-        x.append(cada)
-    x.append(0)
-
-for cada2 in list(dados_sem_notas_zero['NU_NOTA_MT'].value_counts()):
-    if isinstance(cada2, int):
-        y.append(cada2)
-    y.append(0)
-
-print(x)
-print(len(x))
-print(y)
-print(len(y))
+# aqui
 
 """
 plt.plot(x, y)
@@ -807,6 +790,7 @@ print('51------------------------')
 # Aula 5
 from sklearn.tree import DecisionTreeRegressor
 
+x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size=0.25)
 modelo_arvore = DecisionTreeRegressor(max_depth=3)
 modelo_arvore.fit(x_treino, y_treino)
 predicoes_matematica_arvore = modelo_arvore.predict(x_teste)
