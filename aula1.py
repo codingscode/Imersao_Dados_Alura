@@ -798,6 +798,11 @@ predicoes_matematica_arvore = modelo_arvore.predict(x_teste)
 print(mean_squared_error(y_teste, predicoes_matematica_arvore))
 
 print('52------------------------')
+from sklearn.model_selection import cross_validate
+
+modelo_arvore = DecisionTreeRegressor(max_depth=2)
+print(cross_validate(modelo_arvore, x, y))
+
 print('53------------------------')
 print('54------------------------')
 print('55------------------------')
