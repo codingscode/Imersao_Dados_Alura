@@ -43,9 +43,9 @@ paradas
 
 3: finished
 
-4: 46min
+4: finished
 
-
+5: 5min
 
 
 

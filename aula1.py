@@ -783,7 +783,7 @@ resultados = pd.DataFrame()
 resultados['Real'] = y_teste
 resultados['Previsao'] = predicoes_matematica
 resultados['diferenca'] = resultados['Real'] - resultados['Previsao']
-resultados['quadrado_diferenca'] = (resultados['Real'] - resultados['Previsao'])**2
+resultados['quadrado_diferenca'] = (resultados['Real'] - resultados['Previsao']) ** 2
 
 print(resultados)
 
@@ -801,9 +801,18 @@ dummy_predicoes = modelo_dummy.predict(x_teste)
 from sklearn.metrics import mean_squared_error
 
 print(mean_squared_error(y_teste, dummy_predicoes))
-
+print(mean_squared_error(y_teste, predicoes_matematica))
 
 print('51------------------------')
+# Aula 5
+from sklearn.tree import DecisionTreeRegressor
+
+modelo_arvore = DecisionTreeRegressor(max_depth=3)
+modelo_arvore.fit(x_treino, y_treino)
+predicoes_matematica_arvore = modelo_arvore.predict(x_teste)
+
+print(mean_squared_error(y_teste, predicoes_matematica_arvore))
+
 print('52------------------------')
 print('53------------------------')
 print('54------------------------')
