@@ -801,7 +801,8 @@ print('52------------------------')
 from sklearn.model_selection import cross_validate
 
 modelo_arvore = DecisionTreeRegressor(max_depth=2)
-print(cross_validate(modelo_arvore, x, y, scoring='neg_mean_squared_error'))
+resultados = cross_validate(modelo_arvore, x, y, scoring='neg_mean_squared_error')
+print(resultados['test_score'])
 
 print('53------------------------')
 print('54------------------------')
