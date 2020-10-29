@@ -801,12 +801,19 @@ print('52------------------------')
 from sklearn.model_selection import cross_validate
 
 modelo_arvore = DecisionTreeRegressor(max_depth=2)
-resultados = cross_validate(modelo_arvore, x, y, scoring='neg_mean_squared_error')
+resultados = cross_validate(modelo_arvore, x, y, cv=10, scoring='neg_mean_squared_error')
 media = (resultados['test_score']*-1).mean()
 print(media)
-
+print(resultados['test_score']*-1)
 
 print('53------------------------')
+desvio_padrao = (resultados['test_score']*-1).std()
+lim_inferior = media - (2*desvio_padrao)
+lim_superior = media + (2*desvio_padrao)
+
+print(f'Intervalo de confiança {lim_inferior} - {lim_superior}')
+
+
 print('54------------------------')
 print('55------------------------')
 print('56------------------------')
