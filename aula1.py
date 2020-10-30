@@ -820,5 +820,21 @@ print(f'Intervalo de confiança {lim_inferior} - {lim_superior}') # traz sempre 
 
 print('54------------------------')
 
+
+def regressor_arvore(nivel):
+    SEED=1232
+    np.random.seed(SEED)
+    partes = KFold(n_splits=10, shuffle=True)
+    modelo_arvore = DecisionTreeRegressor(max_depth=nivel)
+    resultados = cross_validate(modelo_arvore, x, y, cv=partes, scoring='neg_mean_squared_error')
+    print(f'Teste = {(resultados["test_score"]*-1).mean()}')
+
+
+print(regressor_arvore(2))
+print(regressor_arvore(3))
+print(regressor_arvore(4))
+
 print('55------------------------')
 print('56------------------------')
+print('57------------------------')
+print('58------------------------')
