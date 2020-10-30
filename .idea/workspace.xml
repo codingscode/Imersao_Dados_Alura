@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68586b21-46c2-4461-889a-c9391974269e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aula1.py" beforeDir="false" afterPath="$PROJECT_DIR$/aula1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +28,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Pib\Backup\Arquivo pessoal\TI\Minha Programação\INGLES\linguagem\javascript\Meu vue\JS ALL METHODS\alura_imersao_dados" />
       <recent name="C:\Pib\Backup\Arquivo pessoal\TI\Minha Programação\INGLES\linguagem\javascript\Meu vue\JS ALL METHODS\alura_imersao_dados\nao_enviar" />
     </key>
   </component>
@@ -44,7 +44,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.aula1">
+  <component name="RunManager" selected="Python.final_simplificado (2)">
     <configuration name="aula1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="alura_imersao_dados" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,6 +66,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="final_simplificado (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="alura_imersao_dados" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nao_enviar" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Pib\Backup\Arquivo pessoal\TI\Minha Programação\INGLES\linguagem\javascript\Meu vue\JS ALL METHODS\alura_imersao_dados\final_simplificado.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="final_simplificado (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="alura_imersao_dados" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/final_simplificado.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="final_simplificado" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="alura_imersao_dados" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,49 +120,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Pib\Backup\Arquivo pessoal\TI\Minha Programação\INGLES\linguagem\javascript\Meu vue\JS ALL METHODS\alura_imersao_dados\nao_enviar\final_simplificado.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="teste3" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="alura_imersao_dados" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teste3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="teste4" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="alura_imersao_dados" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/teste4.py" />
+      <option name="SCRIPT_NAME" value="C:\Pib\Backup\Arquivo pessoal\TI\Minha Programação\INGLES\linguagem\javascript\Meu vue\JS ALL METHODS\alura_imersao_dados\final_simplificado.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,7 +141,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Pib\Backup\Arquivo pessoal\TI\Minha Programação\INGLES\linguagem\javascript\Meu vue\JS ALL METHODS\alura_imersao_dados\nao_enviar\final_simplificado.py" />
+      <option name="SCRIPT_NAME" value="C:\Pib\Backup\Arquivo pessoal\TI\Minha Programação\INGLES\linguagem\javascript\Meu vue\JS ALL METHODS\alura_imersao_dados\final_simplificado.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.final_simplificado (2)" />
+        <item itemvalue="Python.final_simplificado (1)" />
         <item itemvalue="Python.aula1" />
         <item itemvalue="Python.final_simplificado" />
         <item itemvalue="Python.teste5" />
-        <item itemvalue="Python.teste3" />
-        <item itemvalue="Python.teste4" />
       </list>
     </recent_temporary>
   </component>
