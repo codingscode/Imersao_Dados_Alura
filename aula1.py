@@ -830,9 +830,9 @@ def regressor_arvore(nivel):
     print(f'Teste = {(resultados["test_score"]*-1).mean()}')
 
 
-print(regressor_arvore(2))
-print(regressor_arvore(3))
-print(regressor_arvore(4))
+for i in range(1, 21):
+    regressor_arvore(i)
+
 
 print('55------------------------')
 print('56------------------------')
