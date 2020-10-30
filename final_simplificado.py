@@ -210,8 +210,8 @@ plt.ylim((-50, 1050))  # experi mentar comentar
 plt.show()
 
 print('40------------------------')
-# print(sns.pairplot(dados_sem_notas_zero[provas])) # descometar urgente
-# plt.show() # descometar urgente
+print(sns.pairplot(dados_sem_notas_zero[provas]))
+plt.show()
 # pegar as 6 disciplinas e fazer comparação de gráficos em pares
 
 print('41------------------------')
