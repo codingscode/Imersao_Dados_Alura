@@ -826,8 +826,8 @@ def regressor_arvore(nivel):
     np.random.seed(SEED)
     partes = KFold(n_splits=10, shuffle=True)
     modelo_arvore = DecisionTreeRegressor(max_depth=nivel)
-    resultados = cross_validate(modelo_arvore, x, y, cv=partes, scoring='neg_mean_squared_error')
-    print(f'Teste = {(resultados["test_score"]*-1).mean()}')
+    resultados = cross_validate(modelo_arvore, x, y, cv=partes, scoring='neg_mean_squared_error', return_train_score=True)
+    print(f'Treino = {(resultados["train_score"]*-1).mean()} | Teste = {(resultados["test_score"]*-1).mean()}')
 
 
 for i in range(1, 21):
