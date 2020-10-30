@@ -801,7 +801,7 @@ print('52------------------------')
 from sklearn.model_selection import cross_validate
 from sklearn.model_selection import KFold
 
-partes = KFold(n_splits=10)
+partes = KFold(n_splits=10, shuffle=True)
 
 modelo_arvore = DecisionTreeRegressor(max_depth=2)
 resultados = cross_validate(modelo_arvore, x, y, cv=partes, scoring='neg_mean_squared_error')
