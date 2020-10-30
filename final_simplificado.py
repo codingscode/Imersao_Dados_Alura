@@ -114,7 +114,8 @@ print(dados.query('NU_IDADE <= 14'))
 
 print('24------------------------')
 print(dados.query('NU_IDADE <= 14')['SG_UF_RESIDENCIA'])
-print(dados.query('NU_IDADE <= 14')['SG_UF_RESIDENCIA'].value_counts(normalize=True)) # traz a proporção para cada estado
+print(
+    dados.query('NU_IDADE <= 14')['SG_UF_RESIDENCIA'].value_counts(normalize=True))  # traz a proporção para cada estado
 
 print('25------------------------')
 alunos_menor_14 = dados.query('NU_IDADE <= 14')
@@ -155,7 +156,7 @@ plt.title('Boxplot das notas totais pela renda')
 plt.show()
 
 print('30------------------------')
-#desafio7: criar uma função para plotar o boxplot do seaborn
+# desafio7: criar uma função para plotar o boxplot do seaborn
 print(sns.displot(dados, x='NU_NOTA_TOTAL'))
 plt.show()
 
@@ -165,8 +166,8 @@ print(dados.query('NU_NOTA_TOTAL == 0'))
 
 print('32------------------------')
 print(dados[provas].query('NU_NOTA_TOTAL == 0'))  # aparece NaN
-#desafio8: Verificar se quem zerou a prova foi eliminado ou não estava presente
-#desafio9: quem é eliminado tira zero ou será NaN(não teve registro de notas)
+# desafio8: Verificar se quem zerou a prova foi eliminado ou não estava presente
+# desafio9: quem é eliminado tira zero ou será NaN(não teve registro de notas)
 
 print('33------------------------')
 dados_sem_notas_zero = dados.query('NU_NOTA_TOTAL != 0')
@@ -190,5 +191,153 @@ print(dados_sem_notas_zero['NU_NOTA_MT'])
 plt.show()
 
 print('37------------------------')
+print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_LC'))
+plt.show()
+
 print('38------------------------')
+# desafio10 : Plotar as médias, medianas e moda nas notas de LC e MT(matplotlib linha vertical)
+
+print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_TOTAL', hue='Q025', kde=True))  # kde cria uma linha
+plt.show()
+print(sns.histplot(dados_sem_notas_zero, x='NU_NOTA_TOTAL', hue='Q025', kde=True,
+                   cumulative=True))  # parametro stat para 'probability', 'density' nao estao funcionando grafico doido
+plt.show()
+
 print('39------------------------')
+sns.scatterplot(data=dados_sem_notas_zero, x='NU_NOTA_MT', y='NU_NOTA_LC')
+plt.xlim((-50, 1050))  # experimentar comentar
+plt.ylim((-50, 1050))  # experi mentar comentar
+plt.show()
+
+print('40------------------------')
+# print(sns.pairplot(dados_sem_notas_zero[provas])) # descometar urgente
+# plt.show() # descometar urgente
+# pegar as 6 disciplinas e fazer comparação de gráficos em pares
+
+print('41------------------------')
+correlacao = dados_sem_notas_zero[provas].corr()
+print(correlacao)  # vai de -1 a 1
+
+print('42------------------------')
+print(sns.heatmap(correlacao, cmap='Blues'))
+plt.show()
+print(sns.heatmap(correlacao, cmap='Blues', center=0))
+plt.show()
+print(sns.heatmap(correlacao, cmap='Blues', center=0, annot=True))
+plt.show()
+
+print('43------------------------')
+provas_entrada = ['NU_NOTA_CH', 'NU_NOTA_LC', 'NU_NOTA_CN', 'NU_NOTA_REDACAO']
+provas_saida = 'NU_NOTA_MT'
+dados_sem_notas_zero = dados_sem_notas_zero[provas].dropna()
+notas_entrada = dados_sem_notas_zero[provas_entrada]
+notas_saida = dados_sem_notas_zero[provas_saida]
+
+print(notas_entrada)
+
+print('44------------------------')
+x = notas_entrada
+y = notas_saida
+
+from sklearn.model_selection import train_test_split
+
+SEED = 4321
+x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size=0.25, random_state=SEED)  # agora é constante
+
+print(x_treino.head())
+print(x_treino.shape)
+print(len(y_treino))
+print(x_teste.shape)
+print(len(y_teste.shape))
+
+print('45------------------------')
+from sklearn.svm import LinearSVR
+
+modelo = LinearSVR(random_state=SEED)  # há erro pois na tabela há NaN
+modelo.fit(x_treino, y_treino)
+predicoes_matematica = modelo.predict(x_teste)
+
+print(y_teste[:5])
+
+print('46------------------------')
+print(sns.scatterplot(x=y_teste, y=y_teste - predicoes_matematica))
+plt.xlim(-50, 1050)
+plt.ylim(-50, 1050)
+plt.show()
+
+print('47------------------------')
+print(sns.scatterplot(x=y_teste, y=y_teste - x_teste.mean(axis=1)))
+plt.show()
+
+print('48------------------------')
+resultados = pd.DataFrame()
+resultados['Real'] = y_teste
+resultados['Previsao'] = predicoes_matematica
+resultados['diferenca'] = resultados['Real'] - resultados['Previsao']
+resultados['quadrado_diferenca'] = (resultados['Real'] - resultados['Previsao'])**2
+
+print(resultados)
+
+print('49------------------------')
+print(resultados['quadrado_diferenca'].mean())
+print(resultados['quadrado_diferenca'].mean() ** 0.5)
+
+print('50------------------------')
+from sklearn.dummy import DummyRegressor
+
+modelo_dummy = DummyRegressor()
+modelo_dummy.fit(x_treino, y_treino)
+dummy_predicoes = modelo_dummy.predict(x_teste)
+
+from sklearn.metrics import mean_squared_error
+
+print(mean_squared_error(y_teste, dummy_predicoes))
+print(mean_squared_error(y_teste, predicoes_matematica))
+
+print('51------------------------')
+# Aula 5
+from sklearn.tree import DecisionTreeRegressor
+
+x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size=0.25)
+modelo_arvore = DecisionTreeRegressor(max_depth=3)
+modelo_arvore.fit(x_treino, y_treino)
+predicoes_matematica_arvore = modelo_arvore.predict(x_teste)
+
+print(mean_squared_error(y_teste, predicoes_matematica_arvore))
+
+print('52------------------------')
+from sklearn.model_selection import cross_validate
+from sklearn.model_selection import KFold
+
+partes = KFold(n_splits=10, shuffle=True)
+
+resultados = cross_validate(modelo_arvore, x, y, cv=partes, scoring='neg_mean_squared_error')
+media = (resultados['test_score']*-1).mean()
+print(media)
+print(resultados['test_score']*-1)
+
+print('53------------------------')
+desvio_padrao = (resultados['test_score']*-1).std()
+lim_inferior = media - (2*desvio_padrao)
+lim_superior = media + (2*desvio_padrao)
+
+print(f'Intervalo de confiança {lim_inferior} - {lim_superior}')  # traz sempre o mesmo resultado
+
+print('54------------------------')
+
+
+def regressor_arvore(nivel):
+    SEED=1232
+    np.random.seed(SEED)
+    partes = KFold(n_splits=10, shuffle=True)
+    modelo_arvore = DecisionTreeRegressor(max_depth=nivel)
+    resultados = cross_validate(modelo_arvore, x, y, cv=partes, scoring='neg_mean_squared_error', return_train_score=True)
+    print(f'Treino = {(resultados["train_score"] * -1).mean()} | Teste = {(resultados["test_score"] * -1).mean()}')
+
+
+for i in range(1, 21):
+    regressor_arvore(i)
+
+print('55------------------------')
+print('56------------------------')
+print('57------------------------')
