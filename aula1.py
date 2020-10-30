@@ -1,4 +1,4 @@
-import pandas as pd, numpy, matplotlib.pyplot as plt
+import pandas as pd, numpy as np, matplotlib.pyplot as plt
 
 # fonte = 'https://github.com/alura-cursos/imersao-dados-2-2020/blob/master/MICRODADOS_ENEM_2019_SAMPLE_43278.csv?raw=true'
 
@@ -801,23 +801,24 @@ print('52------------------------')
 from sklearn.model_selection import cross_validate
 from sklearn.model_selection import KFold
 
+SEED = 1232
+np.random.seed(SEED)
 partes = KFold(n_splits=10, shuffle=True)
 
 modelo_arvore = DecisionTreeRegressor(max_depth=2)
 resultados = cross_validate(modelo_arvore, x, y, cv=partes, scoring='neg_mean_squared_error')
-media = (resultados['test_score']*-1).mean()
+media = (resultados['test_score'] * -1).mean()
 print(media)
-print(resultados['test_score']*-1)
+print(resultados['test_score'] * -1)
 
 print('53------------------------')
-desvio_padrao = (resultados['test_score']*-1).std()
-lim_inferior = media - (2*desvio_padrao)
-lim_superior = media + (2*desvio_padrao)
+desvio_padrao = (resultados['test_score'] * -1).std()
+lim_inferior = media - (2 * desvio_padrao)
+lim_superior = media + (2 * desvio_padrao)
 
-print(f'Intervalo de confiança {lim_inferior} - {lim_superior}')
+print(f'Intervalo de confiança {lim_inferior} - {lim_superior}') # traz sempre o mesmo resultado
 
 print('54------------------------')
-
 
 print('55------------------------')
 print('56------------------------')
